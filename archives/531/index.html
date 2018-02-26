@@ -38,7 +38,7 @@ img.emoji {
 <link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_15018.html                                                       " />
 <link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F531&#038;format=xml" />
 <script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="C/C++基础">
-<meta name="description" content="C/C++面试或者笔试需要准备的专业知识有如下几方面基础知识例如指针，类，虚函数等等虚函数表C++不同于C的特征就是封装，继承，多态。其中多态的实现是用虚函数，所以需要重点理解。一个拥有虚函数的类，对应的有一张虚函数表。虚函数表可以理解成一个函数指针数组，而每个有虚函数的类对应的实例内存最开始的位置都是指向虚函数表的指针，接着才会放成员变量,所以多个对象实际上是公用一个虚函数表。如果是多重继承，就会拥有多个指针，指向每一个基类虚函数表，">
+<meta name="description" content="C/C++面试或者笔试需要准备的专业知识有如下几方面基础知识例如指针，类，虚函数等等写一个函数判断计算机字节序是否是小端bool&nbsp;isLittle() { 	int&nbsp;n=0x12; 	return&nbsp;*(char*)&amp;n==0x12?true:false; }虚函数表C++不同于C的特征就是封装，继承，多态。其中多态的实现是用虚函数，所以需要重点理解。一个拥有虚函数的类，对应的有一张虚函数表。虚函数表">
 <!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]-->
 </head>
 <body class="post-template-default single single-post postid-531 single-format-standard">
@@ -77,14 +77,20 @@ img.emoji {
 			<h1 class="article-title"><a href="                     /archives/531">C/C++基础知识</a></h1>
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/c"> C/C++基础</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-				<time class="muted"><i class="fa fa-clock-o"></i> 3小时前</time>
-				<span class="muted"><i class="fa fa-eye"></i> 2℃</span>
+				<time class="muted"><i class="fa fa-clock-o"></i> 4天前</time>
+				<span class="muted"><i class="fa fa-eye"></i> 9℃</span>
 											</div>
 		</header>
 		<article class="article-content">
 			<p>C/C++面试或者笔试需要准备的专业知识有如下几方面</p>
 <h1>基础知识</h1>
 <p>例如指针，类，虚函数等等</p>
+<h2>写一个函数判断计算机字节序是否是小端</h2>
+<pre class="brush:cpp;toolbar:false">bool&nbsp;isLittle()
+{
+	int&nbsp;n=0x12;
+	return&nbsp;*(char*)&amp;n==0x12?true:false;
+}</pre>
 <h2>虚函数表</h2>
 <p style="text-align: left;">C++不同于C的特征就是封装，继承，多态。其中多态的实现是用虚函数，所以需要重点理解。</p>
 <p style="text-align: left;">一个拥有虚函数的类，对应的有一张虚函数表。虚函数表可以理解成一个函数指针数组，而每个有虚函数的类对应的实例内存最开始的位置都是指向虚函数表的指针，接着才会放成员变量,所以多个对象实际上是公用一个虚函数表。如果是多重继承，就会拥有多个指针，指向每一个基类虚函数表，所以如果是多重继承并且有函数覆盖的情况的话，会覆盖符合条件的所有基类。</p>
@@ -180,22 +186,104 @@ int&nbsp;main()
 }</pre>
 <p>DBL_EPSILON表示double的有效精度</p>
 <p>FLT_EPSILON表示float的有效精度，他们的头文件是float.h</p>
-<h1>算法</h1>
-<p>常见的排序</p>
+<h1>数据结构/算法</h1>
+<p>常见的排序，数据结构</p>
+<h2>二叉树、搜索二叉树（查找二叉树）、平衡二叉树、红黑树</h2>
 <p></p>
 <h1>STL容器相关</h1>
-<p>比如容器的分类，区别，应该怎么选择</p>
+<p>比如容器的分类，区别，应该怎么选择，stl容器分为序列容器和关联容器。序列容器包括vector,deque,list,string。关联容器包括set,map等</p>
 <h2>vector内存不够时，每次增长的倍数</h2>
-<p></p>
+<p>vector是使用一块连续内存，所以当内存不够的时候就会重新分配内存，这个内存增长大小是2倍</p>
+<h2>序列容器的选择</h2>
+<p>vector，deque,list三种序列容器功能都大致一样，但是使用的效率不同。vector是一个连续内存，所以随机访问效率最高，在末尾出添加，删除的效率也很高，但是限制条件是数量不能太大；deque在一定程度上解决了vector数量不能太大的问题，并且可以在头部和尾部进行添加，删除操作，但是随机访问效率不如vecotr；list拥有数量大小基本没有限制，只是和机器相关，缺点是不能随机访问，但是在任何位置进行添加删除的效率都是一样的。</p>
+<p>終上，选择原则如下：</p>
+<ol class=" list-paddingleft-2" style="list-style-type: decimal;">
+<li>
+<p>元素数量不多的情况下，只需要在末尾进行添加删除操作，需要随机访问高效的，选用vector</p>
+</li>
+<li>
+<p>只需要头，尾进行添加删除操作，同时需要随机访问的，选用deque</p>
+</li>
+<li>
+<p>元素数量大，有可能在任意位置进行添加删除操作的，选用list</p>
+</li>
+</ol>
+<h2>vector/deque/list的排序</h2>
+<p>对于vector和deque的排序要使用std::sort函数，该函数的头文件为algorithm（中文意思为算法），该函数至少要有两个参数，迭代器开始位置和迭代器的结束位置，并且迭代器能够随机访问例如it+n这种操作，对于基本数据类型，例如int可以直接调用，例如下面的代码：</p>
+<pre class="brush:cpp;toolbar:false">srand(0);
+vector&lt;int&gt;&nbsp;v;
+for(int&nbsp;i=0;i&lt;5;i++)
+{
+	int&nbsp;n=rand();
+	v.push_back(n);
+}
+#if&nbsp;1
+printf(&quot;有小到大排序\n&quot;);
+std::sort(v.begin(),v.end());
+#else
+printf(&quot;有大到小排序\n&quot;);
+std::sort(v.rbegin(),v.rend());
+#endif
+for(int&nbsp;i=0;i&lt;5;i++)
+{
+	printf(&quot;v[%d]=%d\n&quot;,i,v[i]);
+}</pre>
+<p>但是对于非基本类型，比如自定义的结构体，类就不能简单是使用上面的办法了，需要重载小于符号才能像上面那样使用了，代码如下：</p>
+<pre class="brush:cpp;toolbar:false">#include&nbsp;&lt;stdio.h&gt;
+#include&nbsp;&lt;stdlib.h&gt;
+#include&nbsp;&lt;vector&gt;
+#include&nbsp;&lt;deque&gt;
+#include&nbsp;&lt;list&gt;
+#include&nbsp;&lt;set&gt;
+#include&nbsp;&lt;map&gt;
+#include&nbsp;&lt;algorithm&gt;
+//#include&nbsp;&lt;functional&gt;
+using&nbsp;namespace&nbsp;std;
+struct&nbsp;sDemo
+{
+	int&nbsp;demo;
+	int&nbsp;key;
+	bool&nbsp;operator&nbsp;&lt;&nbsp;(sDemo&amp;&nbsp;n)
+	{
+		if(n.key&gt;this-&gt;key)return&nbsp;true;
+		else&nbsp;return&nbsp;false;
+	}
+};
+int&nbsp;main()
+{
+	srand(0);
+	vector&lt;sDemo&gt;&nbsp;v;
+	for(int&nbsp;i=0;i&lt;5;i++)
+	{
+		sDemo&nbsp;demo;
+		demo.demo=rand();
+		demo.key=rand();
+		v.push_back(demo);
+	}
+
+	std::sort(v.begin(),v.end());
+	for(int&nbsp;i=0;i&lt;5;i++)
+	{
+		printf(&quot;v[%d]=%d&nbsp;%d\n&quot;,i,v[i].key,v[i].demo);
+	}
+
+	system(&quot;pause&quot;);
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;
+}</pre>
+<p>对于list的排序，因为list自己有sort函数所以对于简单的基本类型可以直接调用，但是对于结构体等自定义的类型还是需要重载小于符号，才能调用sort</p>
 <h1>设计模式</h1>
 <p>常见的单例模式，工厂模式，观察者模式</p>
 <p></p>
 <h1>多线程同步，多进程同步</h1>
+<h1>TCP/IP基本知识<br /></h1>
+<h2>tcp三次握手<br /></h2>
+<h2>selcet、poll、epoll的区别<br /></h2>
+<h1>MySQL数据库基本操作<br /></h1>
 <p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/531">C/C++基础知识</a></p>
 
       
 <div class="article-social">
-			<a href="javascript:;" data-action="ding" data-id="531" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a>	
+			<a href="javascript:;" data-action="ding" data-id="531" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">1</span>)</a>	
 </div>
 	</article>	
 				<footer class="article-footer">
@@ -210,22 +298,22 @@ int&nbsp;main()
 
 	<li class="related_box"  >
 		<a href="                     /archives/528" title="bool的理解" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="bool的理解" /><br><span class="r_title">bool的理解</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_46223.html                                                                                                           " alt="bool的理解" /><br><span class="r_title">bool的理解</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/526" title="sizeof的理解" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_13967.html                                                                                                           " alt="sizeof的理解" /><br><span class="r_title">sizeof的理解</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_143.html                                                                                                             " alt="sizeof的理解" /><br><span class="r_title">sizeof的理解</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/195" title="C++中放弃使用cout只使用printf" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_46223.html                                                                                                           " alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/192" title="C++容易搞错的问题" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_9868.html                                                                                                            " alt="C++容易搞错的问题" /><br><span class="r_title">C++容易搞错的问题</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="C++容易搞错的问题" /><br><span class="r_title">C++容易搞错的问题</span></a>
 		</li>
 	</ul>
 
