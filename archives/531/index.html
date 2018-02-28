@@ -33,12 +33,13 @@ img.emoji {
 <script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_28329.js                       '></script>
 <link rel='https://api.w.org/' href='                     /wp-json/' />
 <link rel='prev' title='bool的理解' href='                     /archives/528' />
+<link rel='next' title='ReadDirectoryChangesW找不到标识符' href='                     /archives/565' />
 <link rel="canonical" href="                     /archives/531" />
 <link rel='shortlink' href='/index_50023.html           ' />
 <link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_15018.html                                                       " />
 <link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F531&#038;format=xml" />
 <script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="C/C++基础">
-<meta name="description" content="C/C++面试或者笔试需要准备的专业知识有如下几方面基础知识例如指针，类，虚函数等等写一个函数判断计算机字节序是否是小端bool&nbsp;isLittle() { 	int&nbsp;n=0x12; 	return&nbsp;*(char*)&amp;n==0x12?true:false; }虚函数表C++不同于C的特征就是封装，继承，多态。其中多态的实现是用虚函数，所以需要重点理解。一个拥有虚函数的类，对应的有一张虚函数表。虚函数表">
+<meta name="description" content="C/C++面试或者笔试需要准备的专业知识有如下几方面基础知识例如指针，类，虚函数等等static关键字的作用作用域（代码块，函数，文件全局范围）范围内 表示变量生命周期一直存在，类似全局变量，内存位置为静态存储区；作用域外不可见，不可访问。对于struct/class的成员变量，表示类的命名范围可见，可访问；对于成员函数使用static表示函数在类的命名空间可见，但是该函数只能范围该类的静态成员，不能访问正常的成员变量，成员函数对于静态">
 <!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]-->
 </head>
 <body class="post-template-default single single-post postid-531 single-format-standard">
@@ -77,14 +78,84 @@ img.emoji {
 			<h1 class="article-title"><a href="                     /archives/531">C/C++基础知识</a></h1>
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/c"> C/C++基础</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-				<time class="muted"><i class="fa fa-clock-o"></i> 4天前</time>
-				<span class="muted"><i class="fa fa-eye"></i> 9℃</span>
+				<time class="muted"><i class="fa fa-clock-o"></i> 6天前</time>
+				<span class="muted"><i class="fa fa-eye"></i> 15℃</span>
 											</div>
 		</header>
 		<article class="article-content">
 			<p>C/C++面试或者笔试需要准备的专业知识有如下几方面</p>
 <h1>基础知识</h1>
 <p>例如指针，类，虚函数等等</p>
+<h2>static关键字的作用</h2>
+<ol class=" list-paddingleft-2" style="list-style-type: decimal;">
+<li>
+<p>作用域（代码块，函数，文件全局范围）范围内 表示变量生命周期一直存在，类似全局变量，内存位置为静态存储区；作用域外不可见，不可访问。</p>
+</li>
+<li>
+<p>对于struct/class的成员变量，表示类的命名范围可见，可访问；对于成员函数使用static表示函数在类的命名空间可见，但是该函数只能范围该类的静态成员，不能访问正常的成员变量，成员函数</p>
+</li>
+<li>
+<p>对于静态存储区会初始化为0，所以使用static的变量内存默认会初始化为0</p>
+</li>
+</ol>
+<h2>const关键字的作用</h2>
+<ol class=" list-paddingleft-2" style="list-style-type: decimal;">
+<li>
+<p>定义变量 表示只读，不可写</p>
+</li>
+<li>
+<p>修饰函数参数，返回值时标明参数、返回值只读，不能改变</p>
+</li>
+<li>
+<p>修饰类的成员函数表明该函数不能改变成员变量的值</p>
+</li>
+</ol>
+<h2>指针和引用的区别</h2>
+<ol class=" list-paddingleft-2" style="list-style-type: decimal;">
+<li>
+<p>引用不是对象，不占用内存空间，指针是数据类型，占用空间</p>
+</li>
+<li>
+<p>引用在定义的时候必须初始化，必须赋值，指针不必。</p>
+</li>
+<li>
+<p>引用一旦定义后，就不能改变其引用对象，指针可以</p>
+</li>
+</ol>
+<h2>常用string操作函数及声明、实现</h2>
+<h2>单向链表逆序<br /></h2>
+<h2>下面的写法正确吗</h2>
+<pre class="brush:cpp;toolbar:false">char&nbsp;ch[0];
+char&nbsp;*p=new&nbsp;char[1-1];</pre>
+<p>第一行错误，不能定义长度为0的数组；第二行正确，new的时候可以是0，会返回一个正常的指针，好处是不用判断null，直接可以迭代循环，例如：</p>
+<pre class="brush:cpp;toolbar:false">int&nbsp;n=rand()%2;
+char*&nbsp;p=new&nbsp;char[n];
+for(char*&nbsp;p1=p;p1&lt;p+n;++p1)printf(&quot;%c\n&quot;,*p1);</pre>
+<h2>写出下面代码的运行结果</h2>
+<pre class="brush:cpp;toolbar:false">void&nbsp;test(const&nbsp;int&amp;&nbsp;m)
+{
+	printf(&quot;m=%d\n&quot;,m);
+}
+int&nbsp;main()
+{
+	const&nbsp;int&nbsp;n=0;
+	int*&nbsp;p=(int*)(&amp;n);
+	*p=2;
+	int*&nbsp;p2=(int*)(&amp;n);
+	printf(&quot;*p=%d&nbsp;n=%d&nbsp;*p2=%d\n&quot;,*p,n,*p2);
+	test(n);
+	printf(&quot;*p=%d&nbsp;n=%d&nbsp;*p2=%d\n&quot;,*p,n,*p2);
+	return&nbsp;0;
+}</pre>
+<p>运行结果为</p>
+<pre class="brush:cpp;toolbar:false">*p=2&nbsp;n=0&nbsp;*p2=2
+m=2
+*p=2&nbsp;n=0&nbsp;*p2=2</pre>
+<p>说明强制转换const变量的指针是可以改变对应的值的，只不过const变量本身被当成宏，直接全文替换了</p>
+<h2>补码</h2>
+<p>补码的意义在于，计算机存储整数的时候都通过补码存储，运算的时候就不用区分符合，减法也可以通过加法运算</p>
+<p>正整数的补码就是符号位为0+二进制值</p>
+<p>负数的补码可以理解成0-二进制值，也可以原码进行按位取反再加1</p>
 <h2>写一个函数判断计算机字节序是否是小端</h2>
 <pre class="brush:cpp;toolbar:false">bool&nbsp;isLittle()
 {
@@ -290,7 +361,7 @@ int&nbsp;main()
 			</footer>
 	<nav class="article-nav">
 			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/528" rel="prev">bool的理解</a></span>
-			<span class="article-nav-next"></span>
+			<span class="article-nav-next"><a href="                     /archives/565" rel="next">ReadDirectoryChangesW找不到标识符</a>  <i class="fa fa-angle-double-right"></i></span>
 		</nav>
 
 		<div class="related_top">
@@ -303,17 +374,17 @@ int&nbsp;main()
 	
 	<li class="related_box"  >
 		<a href="                     /archives/526" title="sizeof的理解" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_143.html                                                                                                             " alt="sizeof的理解" /><br><span class="r_title">sizeof的理解</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_65164.html                                                                                                           " alt="sizeof的理解" /><br><span class="r_title">sizeof的理解</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/195" title="C++中放弃使用cout只使用printf" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_46223.html                                                                                                           " alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_37516.html                                                                                                           " alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/192" title="C++容易搞错的问题" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="C++容易搞错的问题" /><br><span class="r_title">C++容易搞错的问题</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="C++容易搞错的问题" /><br><span class="r_title">C++容易搞错的问题</span></a>
 		</li>
 	</ul>
 
@@ -329,6 +400,12 @@ int&nbsp;main()
 
 		<div class="widget widget_recent_entries">		<div class="title"><h2>近期文章</h2></div>		<ul>
 					<li>
+				<a href="                     /archives/567">监听文件夹下面文件创建、删除、重命名事件</a>
+						</li>
+					<li>
+				<a href="                     /archives/565">ReadDirectoryChangesW找不到标识符</a>
+						</li>
+					<li>
 				<a href="                     /archives/531">C/C++基础知识</a>
 						</li>
 					<li>
@@ -336,12 +413,6 @@ int&nbsp;main()
 						</li>
 					<li>
 				<a href="                     /archives/526">sizeof的理解</a>
-						</li>
-					<li>
-				<a href="                     /archives/523">libxl读取Excel文件的日期</a>
-						</li>
-					<li>
-				<a href="                     /archives/520">WordPress静态化后放到GitHub</a>
 						</li>
 				</ul>
 		</div>		</aside></section>
