@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<title>bash脚本技巧 &#8211; 远道者的博客</title>
+<title>centos查看版本号 &#8211; 远道者的博客</title>
 <script>
 window._deel = {name: '远道者的博客',url: '                     /wp-content/themes/yusi1.0', ajaxpager: '', commenton: 0, roll: [0,0]}
 </script>
@@ -32,17 +32,17 @@ img.emoji {
 <script type='text/javascript' src='//libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=1.0'></script>
 <script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_28329.js                       '></script>
 <link rel='https://api.w.org/' href='                     /wp-json/' />
-<link rel='prev' title='linux 加载当前目录动态库' href='                     /archives/85' />
-<link rel='next' title='libcurl在Windows下的编译' href='                     /archives/147' />
-<link rel="canonical" href="                     /archives/100" />
-<link rel='shortlink' href='/index_51505.html           ' />
-<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_12540.html                                                       " />
-<link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F100&#038;format=xml" />
+<link rel='prev' title='redis-cli查看redis数据' href='                     /archives/588' />
+<link rel='next' title='centos5.8构建本地yum源' href='                     /archives/593' />
+<link rel="canonical" href="                     /archives/591" />
+<link rel='shortlink' href='/index_65383.html           ' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_1706.html                                                        " />
+<link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F591&#038;format=xml" />
 <script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="工作技术">
-<meta name="description" content="判断文件夹是否存在if&nbsp;[&nbsp;!&nbsp;-d&nbsp;&quot;/myfolder&quot;&nbsp;];&nbsp;then &nbsp;&nbsp;echo&nbsp;&quot;文件夹不存在&quot; fi判断文件是否存在if&nbsp;[&nbsp;!&nbsp;-f&nbsp;&quot;/demo.txt&quot;&nbsp;];&nbsp;then &nbsp;&nbsp;echo&nbs">
+<meta name="description" content="查看centos的版本号cat&nbsp;/etc/issue这样会显示这种信息CentOS&nbsp;release&nbsp;6.4&nbsp;(Final)查看Linux内核版本、GCC编译版本cat&nbsp;/proc/version会显示类似Linux&nbsp;version&nbsp;2.6.32-358.el6.x86_64&nbsp;(mockbuild@c6b8.bsys.dev.centos.org)&nbsp;">
 <!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]-->
 </head>
-<body class="post-template-default single single-post postid-100 single-format-standard">
+<body class="post-template-default single single-post postid-591 single-format-standard">
 
 <header id="header" class="header">
 <div class="container-inner">
@@ -75,52 +75,44 @@ img.emoji {
 	<div class="content">
 
 				<header class="article-header">
-			<h1 class="article-title"><a href="                     /archives/100">bash脚本技巧</a></h1>
+			<h1 class="article-title"><a href="                     /archives/591">centos查看版本号</a></h1>
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af"> 工作技术</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-				<time class="muted"><i class="fa fa-clock-o"></i> 10个月前 (04-26)</time>
-				<span class="muted"><i class="fa fa-eye"></i> 28℃</span>
+				<time class="muted"><i class="fa fa-clock-o"></i> 8小时前</time>
+				<span class="muted"><i class="fa fa-eye"></i> 3℃</span>
 											</div>
 		</header>
 		<article class="article-content">
-			<p>判断文件夹是否存在</p>
-<pre class="brush:bash;toolbar:false">if&nbsp;[&nbsp;!&nbsp;-d&nbsp;&quot;/myfolder&quot;&nbsp;];&nbsp;then
-&nbsp;&nbsp;echo&nbsp;&quot;文件夹不存在&quot;
-fi</pre>
-<p>判断文件是否存在</p>
-<pre class="brush:bash;toolbar:false">if&nbsp;[&nbsp;!&nbsp;-f&nbsp;&quot;/demo.txt&quot;&nbsp;];&nbsp;then
-&nbsp;&nbsp;echo&nbsp;&quot;文件不存在&quot;
-fi</pre>
+			<h1>查看centos的版本号<br /></h1>
+<pre class="brush:bash;toolbar:false">cat&nbsp;/etc/issue</pre>
+<p>这样会显示这种信息</p>
+<pre class="brush:bash;toolbar:false">CentOS&nbsp;release&nbsp;6.4&nbsp;(Final)</pre>
 <p></p>
-<p>Linux下后台运行脚本或者程序时，不显示日志，也不保留日志，直接重定向到/dev/null设备，例如</p>
-<p>要运行一个叫ftds的程序</p>
-<pre class="brush:bash;toolbar:false">nohup&nbsp;./ftds&nbsp;&gt;&gt;/dev/null&nbsp;&amp;</pre>
+<h1>查看Linux内核版本、GCC编译版本<br /></h1>
+<pre class="brush:bash;toolbar:false">cat&nbsp;/proc/version</pre>
+<p>会显示类似</p>
+<pre class="brush:bash;toolbar:false">Linux&nbsp;version&nbsp;2.6.32-358.el6.x86_64&nbsp;(mockbuild@c6b8.bsys.dev.centos.org)&nbsp;(gcc&nbsp;version&nbsp;4.4.7&nbsp;20120313&nbsp;(Red&nbsp;Hat&nbsp;4.4.7-3)&nbsp;(GCC)&nbsp;)&nbsp;#1&nbsp;SMP&nbsp;Fri&nbsp;Feb&nbsp;22&nbsp;00:31:26&nbsp;UTC&nbsp;2013</pre>
 <p></p>
-<p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/100">bash脚本技巧</a></p>
+<p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/591">centos查看版本号</a></p>
 
       
 <div class="article-social">
-			<a href="javascript:;" data-action="ding" data-id="100" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a>	
+			<a href="javascript:;" data-action="ding" data-id="591" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a>	
 </div>
 	</article>	
 				<footer class="article-footer">
 			</footer>
 	<nav class="article-nav">
-			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/85" rel="prev">linux 加载当前目录动态库</a></span>
-			<span class="article-nav-next"><a href="                     /archives/147" rel="next">libcurl在Windows下的编译</a>  <i class="fa fa-angle-double-right"></i></span>
+			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/588" rel="prev">redis-cli查看redis数据</a></span>
+			<span class="article-nav-next"><a href="                     /archives/593" rel="next">centos5.8构建本地yum源</a>  <i class="fa fa-angle-double-right"></i></span>
 		</nav>
 
 		<div class="related_top">
 			<div class="related_posts"><ul class="related_img">
 
 	<li class="related_box"  >
-		<a href="                     /archives/591" title="centos查看版本号" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="centos查看版本号" /><br><span class="r_title">centos查看版本号</span></a>
-		</li>
-	
-	<li class="related_box"  >
 		<a href="                     /archives/588" title="redis-cli查看redis数据" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_65164.html                                                                                                           " alt="redis-cli查看redis数据" /><br><span class="r_title">redis-cli查看redis数据</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_13967.html                                                                                                           " alt="redis-cli查看redis数据" /><br><span class="r_title">redis-cli查看redis数据</span></a>
 		</li>
 	
 	<li class="related_box"  >
@@ -130,13 +122,18 @@ fi</pre>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/565" title="ReadDirectoryChangesW找不到标识符" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_23183.html                                                                                                           " alt="ReadDirectoryChangesW找不到标识符" /><br><span class="r_title">ReadDirectoryChangesW找不到标识符</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="ReadDirectoryChangesW找不到标识符" /><br><span class="r_title">ReadDirectoryChangesW找不到标识符</span></a>
+		</li>
+	
+	<li class="related_box"  >
+		<a href="                     /archives/523" title="libxl读取Excel文件的日期" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_36608.html                                                                                                            " alt="libxl读取Excel文件的日期" /><br><span class="r_title">libxl读取Excel文件的日期</span></a>
 		</li>
 	</ul>
 
 <div class="relates">
 <ul>
-<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/591">centos查看版本号</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/588">redis-cli查看redis数据</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/567">监听文件夹下面文件创建、删除、重命名事件</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/565">ReadDirectoryChangesW找不到标识符</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/523">libxl读取Excel文件的日期</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/514">重定向ffmpeg输出信息</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/512">屏蔽ffmpeg命令的所有提示</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/509">忽略SIGPIPE信号</a></li>
+<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/588">redis-cli查看redis数据</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/567">监听文件夹下面文件创建、删除、重命名事件</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/565">ReadDirectoryChangesW找不到标识符</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/523">libxl读取Excel文件的日期</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/514">重定向ffmpeg输出信息</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/512">屏蔽ffmpeg命令的所有提示</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/509">忽略SIGPIPE信号</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/506">VS2010编译CEF3源代码</a></li>
 </ul></div></div>		</div>
 									</div>
 </div>

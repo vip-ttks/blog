@@ -78,8 +78,8 @@ img.emoji {
 			<h1 class="article-title"><a href="                     /archives/531">C/C++基础知识</a></h1>
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/c"> C/C++基础</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-				<time class="muted"><i class="fa fa-clock-o"></i> 6天前</time>
-				<span class="muted"><i class="fa fa-eye"></i> 15℃</span>
+				<time class="muted"><i class="fa fa-clock-o"></i> 2周前 (02-22)</time>
+				<span class="muted"><i class="fa fa-eye"></i> 17℃</span>
 											</div>
 		</header>
 		<article class="article-content">
@@ -122,7 +122,26 @@ img.emoji {
 <p>引用一旦定义后，就不能改变其引用对象，指针可以</p>
 </li>
 </ol>
+<h2>assert和throw的区别</h2>
+<p>使用情况不同，assert通常指调用方不按照规范传入数据，例如检查参数有效性方面；throw则指代码模块本身处理不了的问题，例如除法的时候除数为0的情况。</p>
 <h2>常用string操作函数及声明、实现</h2>
+<pre class="brush:cpp;toolbar:false">#include&nbsp;&lt;assert.h&gt;
+char*&nbsp;mystrcpy(char*&nbsp;dst,const&nbsp;char*&nbsp;src)
+{
+	assert(NULL!=dst&amp;&amp;NULL!=src);
+	if(dst==src)return&nbsp;dst;
+	char*&nbsp;tmp=dst;
+	while(*dst++=*src++);
+	return&nbsp;tmp;
+}
+char*&nbsp;mystrcat(char*&nbsp;dst,const&nbsp;char*&nbsp;src)
+{
+	assert(NULL!=dst&amp;&amp;NULL!=src&amp;&amp;dst!=src);
+	char*&nbsp;tmp=dst;
+	while(*dst)++dst;
+	while(*dst++=*src++);
+	return&nbsp;tmp;
+}</pre>
 <h2>单向链表逆序<br /></h2>
 <h2>下面的写法正确吗</h2>
 <pre class="brush:cpp;toolbar:false">char&nbsp;ch[0];
@@ -368,29 +387,29 @@ int&nbsp;main()
 			<div class="related_posts"><ul class="related_img">
 
 	<li class="related_box"  >
+		<a href="                     /archives/593" title="centos5.8构建本地yum源" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_37516.html                                                                                                           " alt="centos5.8构建本地yum源" /><br><span class="r_title">centos5.8构建本地yum源</span></a>
+		</li>
+	
+	<li class="related_box"  >
 		<a href="                     /archives/528" title="bool的理解" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_46223.html                                                                                                           " alt="bool的理解" /><br><span class="r_title">bool的理解</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="bool的理解" /><br><span class="r_title">bool的理解</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/526" title="sizeof的理解" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_65164.html                                                                                                           " alt="sizeof的理解" /><br><span class="r_title">sizeof的理解</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_23183.html                                                                                                           " alt="sizeof的理解" /><br><span class="r_title">sizeof的理解</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/195" title="C++中放弃使用cout只使用printf" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_37516.html                                                                                                           " alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a>
-		</li>
-	
-	<li class="related_box"  >
-		<a href="                     /archives/192" title="C++容易搞错的问题" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="C++容易搞错的问题" /><br><span class="r_title">C++容易搞错的问题</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_143.html                                                                                                             " alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a>
 		</li>
 	</ul>
 
 <div class="relates">
 <ul>
-<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/528">bool的理解</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/526">sizeof的理解</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/195">C++中放弃使用cout只使用printf</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/192">C++容易搞错的问题</a></li>
+<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/593">centos5.8构建本地yum源</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/528">bool的理解</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/526">sizeof的理解</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/195">C++中放弃使用cout只使用printf</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/192">C++容易搞错的问题</a></li>
 </ul></div></div>		</div>
 									</div>
 </div>
@@ -400,19 +419,19 @@ int&nbsp;main()
 
 		<div class="widget widget_recent_entries">		<div class="title"><h2>近期文章</h2></div>		<ul>
 					<li>
+				<a href="                     /archives/593">centos5.8构建本地yum源</a>
+						</li>
+					<li>
+				<a href="                     /archives/591">centos查看版本号</a>
+						</li>
+					<li>
+				<a href="                     /archives/588">redis-cli查看redis数据</a>
+						</li>
+					<li>
 				<a href="                     /archives/567">监听文件夹下面文件创建、删除、重命名事件</a>
 						</li>
 					<li>
 				<a href="                     /archives/565">ReadDirectoryChangesW找不到标识符</a>
-						</li>
-					<li>
-				<a href="                     /archives/531">C/C++基础知识</a>
-						</li>
-					<li>
-				<a href="                     /archives/528">bool的理解</a>
-						</li>
-					<li>
-				<a href="                     /archives/526">sizeof的理解</a>
 						</li>
 				</ul>
 		</div>		</aside></section>
