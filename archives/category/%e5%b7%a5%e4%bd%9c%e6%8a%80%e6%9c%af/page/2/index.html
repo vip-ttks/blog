@@ -71,22 +71,49 @@ img.emoji {
 			<h1><i class="fa fa-folder-open"></i>  &nbsp;分类：工作技术  <a title="订阅工作技术" target="_blank" href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af/feed"><i class="rss fa fa-rss"></i></a></h1>
 					</header>
 				<article class="excerpt">
+	<header><h2><a target="_blank" href="                     /archives/470" title="tar压缩包以时间命名">tar压缩包以时间命名  </a></h2>
+	</header>
+	<div class="focus"><a target="_blank" href="                     /archives/470"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_49566.html                                                                                                           " alt="tar压缩包以时间命名" /></a></div>
+			<span class="note"> 用tar命令压缩包的时候添加时间方便归类
+#!/bin/bash
+t=$(date&nbsp;+%Y%m%d%H%M%S)
+tar&nbsp;-czf&nbsp;trans-$t.tar.gz&nbsp;bin/
+这样压缩的包出来就这样了trans-2017112311150...</span>
+<p class="auth-span">
+		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
+		<span class="muted"><i class="fa fa-clock-o"></i> 5个月前 (11-23)</span>	<span class="muted"><i class="fa fa-eye"></i> 19℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+<a href="javascript:;" data-action="ding" data-id="470" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
+</article>
+<article class="excerpt">
+	<header><h2><a target="_blank" href="                     /archives/248" title="lua使用管道获取结果">lua使用管道获取结果  </a></h2>
+	</header>
+	<div class="focus"><a target="_blank" href="                     /archives/248"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_39838.html                                                                                                           " alt="lua使用管道获取结果" /></a></div>
+			<span class="note"> lua调用wget,curl等命令的时候可以使用os.excute，但是如果想要获取执行结果的话这个函数就不行了
+可以用管道io.popen下面是一个实例
+function&nbsp;get(url)
+&nbsp;&nbsp;&nbsp;&nbsp;local&nbsp;han...</span>
+<p class="auth-span">
+		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
+		<span class="muted"><i class="fa fa-clock-o"></i> 6个月前 (10-09)</span>	<span class="muted"><i class="fa fa-eye"></i> 27℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+<a href="javascript:;" data-action="ding" data-id="248" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
+</article>
+<article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/245" title="centos7安装g++">centos7安装g++  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/245"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_63390.html                                                                                                           " alt="centos7安装g++" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/245"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_44446.html                                                                                                           " alt="centos7安装g++" /></a></div>
 			<span class="note"> yum&nbsp;-y&nbsp;install&nbsp;gcc-c++
 yum&nbsp;-y&nbsp;install&nbsp;glibc-devel.i686
 
 转载请注明：远道者的博客 &raquo; centos7安装g++...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 6个月前 (09-28)</span>	<span class="muted"><i class="fa fa-eye"></i> 17℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 7个月前 (09-28)</span>	<span class="muted"><i class="fa fa-eye"></i> 19℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="245" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/243" title="centos7更新yum源为163的源">centos7更新yum源为163的源  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/243"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_2461.html                                                                                                            " alt="centos7更新yum源为163的源" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/243"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_63390.html                                                                                                           " alt="centos7更新yum源为163的源" /></a></div>
 			<span class="note"> centos7更新yum源为163的源
 直接运行下面的脚本就行了，会备份之前的源
 #!/bin/bash
@@ -94,26 +121,26 @@ dir=$(pwd)
 cp&nbsp;/etc/yum.repos.d/CentOS-Base.repo&nbsp;/etc/yum.repos.d/CentOS-Bas...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 6个月前 (09-28)</span>	<span class="muted"><i class="fa fa-eye"></i> 19℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 7个月前 (09-28)</span>	<span class="muted"><i class="fa fa-eye"></i> 21℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="243" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/232" title="nginx使用lua相关">nginx使用lua相关  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/232"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_63390.html                                                                                                           " alt="nginx使用lua相关" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/232"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_5137.html                                                                                                             " alt="nginx使用lua相关" /></a></div>
 			<span class="note"> nginx使用lua设置回应的Http头，比如要在回应的http头里面添加一个name:so123可以这样
 ngx.header[&quot;name&quot;]&nbsp;=&nbsp;&quot;so123&quot;;
 所以要添加refer也是很简单
 ngx.header...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 7个月前 (09-13)</span>	<span class="muted"><i class="fa fa-eye"></i> 56℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 7个月前 (09-13)</span>	<span class="muted"><i class="fa fa-eye"></i> 58℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="232" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">1</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/230" title="luajit ffi使用C++的动态库">luajit ffi使用C++的动态库  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/230"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_2461.html                                                                                                            " alt="luajit ffi使用C++的动态库" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/230"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_26013.html                                                                                                           " alt="luajit ffi使用C++的动态库" /></a></div>
 			<span class="note"> C++部分
 先上C++的代码
 #include&nbsp;&lt;stdio.h&gt;
@@ -124,20 +151,20 @@ void&nbsp;test(char*);
 int&nbsp...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 7个月前 (09-06)</span>	<span class="muted"><i class="fa fa-eye"></i> 19℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 7个月前 (09-06)</span>	<span class="muted"><i class="fa fa-eye"></i> 21℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="230" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/227" title="nginx配置代理，以及缓存，删除缓存">nginx配置代理，以及缓存，删除缓存  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/227"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_63390.html                                                                                                           " alt="nginx配置代理，以及缓存，删除缓存" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/227"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_48541.html                                                                                                           " alt="nginx配置代理，以及缓存，删除缓存" /></a></div>
 			<span class="note"> 项目需要用到，Nginx需要配置代理到php服务器，然后需要按照标准Http进行来缓存，然后提供对外接口可以用来删除缓存
 其中http缓存参数是Expires 或者Cache-Control: max-age具体原理自行百度
 下面是一个可用的Nginx配置文件
 user&nbsp...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 7个月前 (08-28)</span>	<span class="muted"><i class="fa fa-eye"></i> 58℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 8个月前 (08-28)</span>	<span class="muted"><i class="fa fa-eye"></i> 60℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="227" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
@@ -151,13 +178,13 @@ while(1)和for(;;)相比for(;;)的效率要高些，因为后者不会有比较�
 		printf(&quot;for\r\n&quot;)...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 9个月前 (07-18)</span>	<span class="muted"><i class="fa fa-eye"></i> 22℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 9个月前 (07-18)</span>	<span class="muted"><i class="fa fa-eye"></i> 24℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="199" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/195" title="C++中放弃使用cout只使用printf">C++中放弃使用cout只使用printf  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/195"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_12190.html                                                                                                           " alt="C++中放弃使用cout只使用printf" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/195"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_39838.html                                                                                                           " alt="C++中放弃使用cout只使用printf" /></a></div>
 			<span class="note"> cout被大家认为简洁，安全，但是效率真心是无法忍受的，下面的测试代码
 #include&nbsp;&lt;stdio.h&gt;
 #include&nbsp;&lt;stdlib.h&gt;
@@ -165,31 +192,31 @@ while(1)和for(;;)相比for(;;)的效率要高些，因为后者不会有比较�
 #include...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 9个月前 (07-18)</span>	<span class="muted"><i class="fa fa-eye"></i> 22℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 9个月前 (07-18)</span>	<span class="muted"><i class="fa fa-eye"></i> 24℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="195" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/192" title="C++容易搞错的问题">C++容易搞错的问题  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/192"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_48541.html                                                                                                           " alt="C++容易搞错的问题" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/192"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_44446.html                                                                                                           " alt="C++容易搞错的问题" /></a></div>
 			<span class="note"> 下面的代码 打印结果
 int&nbsp;ch[]={0,1,2,3,4,5};
 printf(&quot;%d&nbsp;%d&nbsp;%d&nbsp;%d&nbsp;%d\r\n&quot;,ch,&amp;ch,&amp;ch+1,&amp;ch+2,&amp;ch[1]...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 9个月前 (07-17)</span>	<span class="muted"><i class="fa fa-eye"></i> 31℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 9个月前 (07-17)</span>	<span class="muted"><i class="fa fa-eye"></i> 33℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="192" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/159" title="使用ffmpeg录制直播 按照时间分段保存">使用ffmpeg录制直播 按照时间分段保存  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/159"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_5137.html                                                                                                             " alt="使用ffmpeg录制直播 按照时间分段保存" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/159"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_21405.html                                                                                                           " alt="使用ffmpeg录制直播 按照时间分段保存" /></a></div>
 			<span class="note"> 使用ffmpeg录制直播 按照时间分段保存，命令如下
 打开一个命令窗口 进入到ffmpeg所在目录 然后执行下面的语句 60代表的是60秒 一个文件60秒 如果是3600就表示每一个小时保存为一个文件
 ffmpeg.exe&nbsp;-i&nbsp;http://192.168....</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 10个月前 (06-08)</span>	<span class="muted"><i class="fa fa-eye"></i> 22℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 10个月前 (06-08)</span>	<span class="muted"><i class="fa fa-eye"></i> 24℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="159" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
@@ -202,13 +229,13 @@ ffmpeg.exe&nbsp;-i&nbsp;http://192.168....</span>
 &nbsp;&nbsp;&...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 10个月前 (06-04)</span>	<span class="muted"><i class="fa fa-eye"></i> 23℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 10个月前 (06-04)</span>	<span class="muted"><i class="fa fa-eye"></i> 25℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="156" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/153" title="NAT类型及判断">NAT类型及判断  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/153"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_5137.html                                                                                                             " alt="NAT类型及判断" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/153"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_49566.html                                                                                                           " alt="NAT类型及判断" /></a></div>
 			<span class="note"> NAT类型分4中，分别为full cone，strict cone，port strict cone，symmetric cone共4种类型
 定义
 局域网本地IP为ip_src,端口为port_src
@@ -216,25 +243,25 @@ ffmpeg.exe&nbsp;-i&nbsp;http://192.168....</span>
 定义本机...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 11个月前 (05-23)</span>	<span class="muted"><i class="fa fa-eye"></i> 24℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 11个月前 (05-23)</span>	<span class="muted"><i class="fa fa-eye"></i> 26℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="153" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">1</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/151" title="iptable添加、删除端口">iptable添加、删除端口  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/151"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_48541.html                                                                                                           " alt="iptable添加、删除端口" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/151"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_21405.html                                                                                                           " alt="iptable添加、删除端口" /></a></div>
 			<span class="note"> 简洁才是王道，
 下面是添加一个udp端口，端口号8566，即接收到8566端口的所有udp包
 /sbin/iptables&nbsp;-I&nbsp;INPUT&nbsp;-p&nbsp;udp&nbsp;--dport&nbsp;8566&nbsp;-j&nbsp;ACCEPT...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 11个月前 (05-23)</span>	<span class="muted"><i class="fa fa-eye"></i> 43℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 11个月前 (05-23)</span>	<span class="muted"><i class="fa fa-eye"></i> 45℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="151" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/100" title="bash脚本技巧">bash脚本技巧  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/100"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_39838.html                                                                                                           " alt="bash脚本技巧" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/100"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_26013.html                                                                                                           " alt="bash脚本技巧" /></a></div>
 			<span class="note"> 判断文件夹是否存在
 if&nbsp;[&nbsp;!&nbsp;-d&nbsp;&quot;/myfolder&quot;&nbsp;];&nbsp;then
 &nbsp;&nbsp;echo&nbsp;&quot;文件夹不存在&quot;
@@ -243,7 +270,7 @@ fi
 if&nb...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-26)</span>	<span class="muted"><i class="fa fa-eye"></i> 32℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-26)</span>	<span class="muted"><i class="fa fa-eye"></i> 34℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="100" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
@@ -256,25 +283,25 @@ export&nbsp;LD_LIBRARY_PATH=/home/darren
 cd&nbsp...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-25)</span>	<span class="muted"><i class="fa fa-eye"></i> 27℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-25)</span>	<span class="muted"><i class="fa fa-eye"></i> 29℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="85" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/83" title="NSIS脚本安装包包含时间">NSIS脚本安装包包含时间  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/83"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_2461.html                                                                                                            " alt="NSIS脚本安装包包含时间" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/83"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_21405.html                                                                                                           " alt="NSIS脚本安装包包含时间" /></a></div>
 			<span class="note"> 有时候安装包太多不能正确区分版本，在安装包名字里面加一个打包时间可以很好的解决这个问题，通常名称都是一个确定的常量，例如
 Name&nbsp;&quot;${PRODUCT_NAME}&nbsp;${PRODUCT_VERSION}&quot;
 OutFile&nbsp;&qu...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-24)</span>	<span class="muted"><i class="fa fa-eye"></i> 27℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-24)</span>	<span class="muted"><i class="fa fa-eye"></i> 29℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="83" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/80" title="nginx编译内置pcre,zlib,openssl">nginx编译内置pcre,zlib,openssl  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/80"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_2461.html                                                                                                            " alt="nginx编译内置pcre,zlib,openssl" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/80"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_63390.html                                                                                                           " alt="nginx编译内置pcre,zlib,openssl" /></a></div>
 			<span class="note"> 通常编译Nginx的时候都是用系统中已经安装好的pcre,zlib,openssl库，但是这种编译出来的Nginx有如下几个缺点
 
 
@@ -287,26 +314,26 @@ OutFile&nbsp;&qu...</span>
 动态库的版本不方便控制，实际部署环境下可能这些库的...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-23)</span>	<span class="muted"><i class="fa fa-eye"></i> 29℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-23)</span>	<span class="muted"><i class="fa fa-eye"></i> 31℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="80" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/72" title="bat脚本获取管理员权限">bat脚本获取管理员权限  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/72"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_63390.html                                                                                                           " alt="bat脚本获取管理员权限" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/72"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_39838.html                                                                                                           " alt="bat脚本获取管理员权限" /></a></div>
 			<span class="note"> 有的时候bat脚本需要内部获取管理员权限，不用右键运行，添加如下代码即可
 @echo&nbsp;off&nbsp;&nbsp;
 ::&nbsp;BatchGotAdmin&nbsp;&nbsp;
 :-------------------------------------&n...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-21)</span>	<span class="muted"><i class="fa fa-eye"></i> 29℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-21)</span>	<span class="muted"><i class="fa fa-eye"></i> 31℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="72" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/68" title="linux下find和rm结合删除特定文件">linux下find和rm结合删除特定文件  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/68"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_44446.html                                                                                                           " alt="linux下find和rm结合删除特定文件" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/68"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_12190.html                                                                                                           " alt="linux下find和rm结合删除特定文件" /></a></div>
 			<span class="note"> Linux下find命令可以查找特定名字的文件，rm可以进行删除，两个命令结合在一起就能删除特定的文件了，例如删除所有
 文件名包含svn的文件
 find&nbsp;./&nbsp;-name&nbsp;*svn|xargs&nbsp;rm&nbsp;-rf
@@ -314,7 +341,7 @@ find&nbsp;./&nbsp;-name&nbsp;*svn|xargs&nbsp;rm&nbsp;-rf
 转载请注明：远道者的...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-20)</span>	<span class="muted"><i class="fa fa-eye"></i> 40℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-20)</span>	<span class="muted"><i class="fa fa-eye"></i> 42℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="68" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
@@ -326,13 +353,13 @@ find&nbsp;./&nbsp;-name&nbsp;*svn|xargs&nbsp;rm&nbsp;-rf
 mv&nbsp;/etc/yum.repos.d/CentOS-Base.repo&nbsp;/etc/yum.repos.d/CentOS-Base.re...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-20)</span>	<span class="muted"><i class="fa fa-eye"></i> 51℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-20)</span>	<span class="muted"><i class="fa fa-eye"></i> 53℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="60" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/56" title="使用MingGW-w64 Build Script 3.6.7搭建ffmpeg编译环境">使用MingGW-w64 Build Script 3.6.7搭建ffmpeg编译环境  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/56"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_21405.html                                                                                                           " alt="使用MingGW-w64 Build Script 3.6.7搭建ffmpeg编译环境" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/56"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_49566.html                                                                                                           " alt="使用MingGW-w64 Build Script 3.6.7搭建ffmpeg编译环境" /></a></div>
 			<span class="note"> 在Linux下编译的Windows版本ffmpeg没有其他的依赖库 使用的是centos5.8
 1.脚本下载
 wget&nbsp;http://zeranoe.com/scripts/mingw_w64_build/mingw-w64-build-3.6.7
@@ -340,24 +367,24 @@ wget&nbsp;http://zeranoe.com/scripts/mingw_w64_build/mingw-w64-build-3.6.7
 #!/...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-20)</span>	<span class="muted"><i class="fa fa-eye"></i> 57℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-20)</span>	<span class="muted"><i class="fa fa-eye"></i> 59℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="56" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/47" title="VC 获取系统特殊路径">VC 获取系统特殊路径  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/47"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_44446.html                                                                                                           " alt="VC 获取系统特殊路径" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/47"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_26013.html                                                                                                           " alt="VC 获取系统特殊路径" /></a></div>
 			<span class="note"> 在Windows编程中通常需要获取一些特殊路径，例如系统临时文件夹路径，系统DATA路径，当期用户的home路径等等，这些都可以调用API函数来获取SHGetSpecialFolderPath
 下面是我的一个函数，获取系统APPDATA路径，然后在改目录下面创建了一个yuntu目...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-17)</span>	<span class="muted"><i class="fa fa-eye"></i> 66℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-17)</span>	<span class="muted"><i class="fa fa-eye"></i> 68℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="47" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/45" title="html a标签">html a标签  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/45"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_5137.html                                                                                                             " alt="html a标签" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/45"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_49566.html                                                                                                           " alt="html a标签" /></a></div>
 			<span class="note"> a标签的href属性表示链接具体地址，分一下几种情况
 
 
@@ -370,13 +397,13 @@ wget&nbsp;http://zeranoe.com/scripts/mingw_w64_build/mingw-w64-build-3.6.7
 相对地址 当前路径下href=&quot...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 12个月前 (04-15)</span>	<span class="muted"><i class="fa fa-eye"></i> 103℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-15)</span>	<span class="muted"><i class="fa fa-eye"></i> 105℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="45" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/27" title="ffmpeg转码，推流指南">ffmpeg转码，推流指南  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/27"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_26013.html                                                                                                           " alt="ffmpeg转码，推流指南" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/27"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_48541.html                                                                                                           " alt="ffmpeg转码，推流指南" /></a></div>
 			<span class="note"> ffmpeg的安装部署
 Windows下面的安装：
 浏览器打开https://ffmpeg.zeranoe.com/builds/
@@ -384,13 +411,13 @@ Windows下面的安装：
 下载完成后解压 复制其中的ffmpeg.exe 到系统目录C:\W...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-13)</span>	<span class="muted"><i class="fa fa-eye"></i> 131℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-13)</span>	<span class="muted"><i class="fa fa-eye"></i> 133℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="27" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/17" title="gearman环境搭建">gearman环境搭建  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/17"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_44446.html                                                                                                           " alt="gearman环境搭建" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/17"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_21405.html                                                                                                           " alt="gearman环境搭建" /></a></div>
 			<span class="note"> 公司的转码服务是通过gearman来运转的，之前运维辞职了居然就跑不起来了。
 在Ubuntu 14.04.5 LTS的基础上安装gearman，完成调试
 1.修改源
@@ -399,7 +426,7 @@ Windows下面的安装：
 s...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-12)</span>	<span class="muted"><i class="fa fa-eye"></i> 114℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-12)</span>	<span class="muted"><i class="fa fa-eye"></i> 116℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="17" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">0</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
@@ -413,20 +440,20 @@ s...</span>
 echo&nbsp;...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-11)</span>	<span class="muted"><i class="fa fa-eye"></i> 125℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-11)</span>	<span class="muted"><i class="fa fa-eye"></i> 127℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> </span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="9" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">1</span>喜欢</a></span></p>
 </article>
 <article class="excerpt">
 	<header><h2><a target="_blank" href="                     /archives/5" title="本地环境搭建WordPress网站">本地环境搭建WordPress网站  </a></h2>
 	</header>
-	<div class="focus"><a target="_blank" href="                     /archives/5"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_44446.html                                                                                                           " alt="本地环境搭建WordPress网站" /></a></div>
+	<div class="focus"><a target="_blank" href="                     /archives/5"><img class="thumb" src="/wp-content/themes/yusi1.0/timthumb_39838.html                                                                                                           " alt="本地环境搭建WordPress网站" /></a></div>
 			<span class="note"> 本地环境搭建WordPress网站
 一直有一个想法，把工作中遇到的问题，解决过的问题都记录下来，方便自己查询，就选择弄一个本地博客，比较方便，实惠。
 需要的资源
 1.需要的工具软件xampp.zip我用的是http://www.xampps.com/网站的版本，也可以到我的网盘下...</span>
 <p class="auth-span">
 		<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-10)</span>	<span class="muted"><i class="fa fa-eye"></i> 117℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> <a target="_blank" href="                     /archives/5#respond">0评论</a></span><span class="muted">
+		<span class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-10)</span>	<span class="muted"><i class="fa fa-eye"></i> 119℃</span>	<span class="muted"><i class="fa fa-comments-o"></i> <a target="_blank" href="                     /archives/5#respond">0评论</a></span><span class="muted">
 <a href="javascript:;" data-action="ding" data-id="5" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">1</span>喜欢</a></span></p>
 </article>
 <div class="pagination"><ul><li class="prev-page"><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af/" >上一页</a></li><li><a href='                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af/'>1</a></li><li class="active"><span>2</span></li><li class="next-page"></li></ul></div>	</div>
@@ -437,6 +464,12 @@ echo&nbsp;...</span>
 
 		<div class="widget widget_recent_entries">		<div class="title"><h2>近期文章</h2></div>		<ul>
 					<li>
+				<a href="                     /archives/639">Digest认证模式</a>
+						</li>
+					<li>
+				<a href="                     /archives/637">Linux下system命令执行脚本代码</a>
+						</li>
+					<li>
 				<a href="                     /archives/635">curl的结果保存到bash变量</a>
 						</li>
 					<li>
@@ -444,12 +477,6 @@ echo&nbsp;...</span>
 						</li>
 					<li>
 				<a href="                     /archives/631">CComboBox设置下拉框高度</a>
-						</li>
-					<li>
-				<a href="                     /archives/628">nginx编译</a>
-						</li>
-					<li>
-				<a href="                     /archives/626">nginx前台启动 关闭master进程</a>
 						</li>
 				</ul>
 		</div>		</aside></section>

@@ -79,7 +79,7 @@ img.emoji {
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af"> 工作技术</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
 				<time class="muted"><i class="fa fa-clock-o"></i> 4周前 (03-14)</time>
-				<span class="muted"><i class="fa fa-eye"></i> 15℃</span>
+				<span class="muted"><i class="fa fa-eye"></i> 20℃</span>
 											</div>
 		</header>
 		<article class="article-content">
@@ -115,6 +115,11 @@ vhost&nbsp;__defaultVhost__&nbsp;{
 ffplay&nbsp;http://192.168.3.3:8080/live/lei.flv
 ffplay&nbsp;http://192.168.3.3:8080/live/lei.m3u8</pre>
 <p></p>
+<p>点播相关</p>
+<p>比较遗憾的是这个版本对MP4播放的支持不是很好，实测就算是流化过的MP4文件，也不能实现一边下载一边播放</p>
+<p>主要问题出在下面的这个函数</p>
+<pre class="brush:cpp;toolbar:false">int&nbsp;XlyHttpFileServer::serve_mp4_file(IXlyHttpResponseWriter*&nbsp;w,&nbsp;IXlyHttpMessage*&nbsp;r,&nbsp;string&nbsp;fullpath)</pre>
+<p></p>
 <p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/609">srs-v2.0-r2编译、使用</a></p>
 
       
@@ -133,29 +138,29 @@ ffplay&nbsp;http://192.168.3.3:8080/live/lei.m3u8</pre>
 			<div class="related_posts"><ul class="related_img">
 
 	<li class="related_box"  >
+		<a href="                     /archives/639" title="Digest认证模式" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_37516.html                                                                                                           " alt="Digest认证模式" /><br><span class="r_title">Digest认证模式</span></a>
+		</li>
+	
+	<li class="related_box"  >
+		<a href="                     /archives/637" title="Linux下system命令执行脚本代码" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_65164.html                                                                                                           " alt="Linux下system命令执行脚本代码" /><br><span class="r_title">Linux下system命令执行脚本代码</span></a>
+		</li>
+	
+	<li class="related_box"  >
 		<a href="                     /archives/635" title="curl的结果保存到bash变量" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="curl的结果保存到bash变量" /><br><span class="r_title">curl的结果保存到bash变量</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_37516.html                                                                                                           " alt="curl的结果保存到bash变量" /><br><span class="r_title">curl的结果保存到bash变量</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/633" title="VC选择文件夹提示框" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_37516.html                                                                                                           " alt="VC选择文件夹提示框" /><br><span class="r_title">VC选择文件夹提示框</span></a>
-		</li>
-	
-	<li class="related_box"  >
-		<a href="                     /archives/631" title="CComboBox设置下拉框高度" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_37516.html                                                                                                           " alt="CComboBox设置下拉框高度" /><br><span class="r_title">CComboBox设置下拉框高度</span></a>
-		</li>
-	
-	<li class="related_box"  >
-		<a href="                     /archives/628" title="nginx编译" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_9868.html                                                                                                            " alt="nginx编译" /><br><span class="r_title">nginx编译</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_9868.html                                                                                                            " alt="VC选择文件夹提示框" /><br><span class="r_title">VC选择文件夹提示框</span></a>
 		</li>
 	</ul>
 
 <div class="relates">
 <ul>
-<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/635">curl的结果保存到bash变量</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/633">VC选择文件夹提示框</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/631">CComboBox设置下拉框高度</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/628">nginx编译</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/626">nginx前台启动 关闭master进程</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/623">sqlite使用实例</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/621">mp4流化</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/617">linux下获取可靠的当前时间</a></li>
+<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/639">Digest认证模式</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/637">Linux下system命令执行脚本代码</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/635">curl的结果保存到bash变量</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/633">VC选择文件夹提示框</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/631">CComboBox设置下拉框高度</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/628">nginx编译</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/626">nginx前台启动 关闭master进程</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/623">sqlite使用实例</a></li>
 </ul></div></div>		</div>
 									</div>
 </div>
@@ -165,6 +170,12 @@ ffplay&nbsp;http://192.168.3.3:8080/live/lei.m3u8</pre>
 
 		<div class="widget widget_recent_entries">		<div class="title"><h2>近期文章</h2></div>		<ul>
 					<li>
+				<a href="                     /archives/639">Digest认证模式</a>
+						</li>
+					<li>
+				<a href="                     /archives/637">Linux下system命令执行脚本代码</a>
+						</li>
+					<li>
 				<a href="                     /archives/635">curl的结果保存到bash变量</a>
 						</li>
 					<li>
@@ -172,12 +183,6 @@ ffplay&nbsp;http://192.168.3.3:8080/live/lei.m3u8</pre>
 						</li>
 					<li>
 				<a href="                     /archives/631">CComboBox设置下拉框高度</a>
-						</li>
-					<li>
-				<a href="                     /archives/628">nginx编译</a>
-						</li>
-					<li>
-				<a href="                     /archives/626">nginx前台启动 关闭master进程</a>
 						</li>
 				</ul>
 		</div>		</aside></section>

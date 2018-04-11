@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<title>centos查看版本号 &#8211; 远道者的博客</title>
+<title>Digest认证模式 &#8211; 远道者的博客</title>
 <script>
 window._deel = {name: '远道者的博客',url: '                     /wp-content/themes/yusi1.0', ajaxpager: '', commenton: 0, roll: [0,0]}
 </script>
@@ -32,17 +32,16 @@ img.emoji {
 <script type='text/javascript' src='//libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=1.0'></script>
 <script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_28329.js                       '></script>
 <link rel='https://api.w.org/' href='                     /wp-json/' />
-<link rel='prev' title='redis-cli查看redis数据' href='                     /archives/588' />
-<link rel='next' title='centos5.8构建本地yum源' href='                     /archives/593' />
-<link rel="canonical" href="                     /archives/591" />
-<link rel='shortlink' href='/index_65383.html           ' />
-<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_1706.html                                                        " />
-<link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F591&#038;format=xml" />
+<link rel='prev' title='Linux下system命令执行脚本代码' href='                     /archives/637' />
+<link rel="canonical" href="                     /archives/639" />
+<link rel='shortlink' href='/index_17256.html           ' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_47781.html                                                       " />
+<link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F639&#038;format=xml" />
 <script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="工作技术">
-<meta name="description" content="查看centos的版本号cat&nbsp;/etc/issue这样会显示这种信息CentOS&nbsp;release&nbsp;6.4&nbsp;(Final)查看Linux内核版本、GCC编译版本cat&nbsp;/proc/version会显示类似Linux&nbsp;version&nbsp;2.6.32-358.el6.x86_64&nbsp;(mockbuild@c6b8.bsys.dev.centos.org)&nbsp;">
+<meta name="description" content="Digest认证模式先对还是比较安全，和basic认证模式相比，密码没有明文传送。下面是浏览器请求服务器的HTTP报文GET&nbsp;/&nbsp;HTTP/1.1 Host:&nbsp;127.0.0.1:9902 Connection:&nbsp;keep-alive Authorization:&nbsp;Digest&nbsp;username=&quot;admin&quot;,&nbsp;realm=&quot;127.0">
 <!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]-->
 </head>
-<body class="post-template-default single single-post postid-591 single-format-standard">
+<body class="post-template-default single single-post postid-639 single-format-standard">
 
 <header id="header" class="header">
 <div class="container-inner">
@@ -75,65 +74,87 @@ img.emoji {
 	<div class="content">
 
 				<header class="article-header">
-			<h1 class="article-title"><a href="                     /archives/591">centos查看版本号</a></h1>
+			<h1 class="article-title"><a href="                     /archives/639">Digest认证模式</a></h1>
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af"> 工作技术</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-				<time class="muted"><i class="fa fa-clock-o"></i> 1个月前 (03-07)</time>
-				<span class="muted"><i class="fa fa-eye"></i> 8℃</span>
+				<time class="muted"><i class="fa fa-clock-o"></i> 2天前</time>
+				<span class="muted"><i class="fa fa-eye"></i> 7℃</span>
 											</div>
 		</header>
 		<article class="article-content">
-			<h1>查看centos的版本号<br /></h1>
-<pre class="brush:bash;toolbar:false">cat&nbsp;/etc/issue</pre>
-<p>这样会显示这种信息</p>
-<pre class="brush:bash;toolbar:false">CentOS&nbsp;release&nbsp;6.4&nbsp;(Final)</pre>
+			<p>Digest认证模式先对还是比较安全，和basic认证模式相比，密码没有明文传送。</p>
+<p>下面是浏览器请求服务器的HTTP报文</p>
+<pre class="brush:bash;toolbar:false">GET&nbsp;/&nbsp;HTTP/1.1
+Host:&nbsp;127.0.0.1:9902
+Connection:&nbsp;keep-alive
+Authorization:&nbsp;Digest&nbsp;username=&quot;admin&quot;,&nbsp;realm=&quot;127.0.0.1:9902&quot;,&nbsp;nonce=&quot;xx&quot;,&nbsp;uri=&quot;/&quot;,&nbsp;response=&quot;aa77d88dd6037792f0cb8b2d9835d268&quot;,&nbsp;opaque=&quot;xx&quot;,&nbsp;qop=auth,&nbsp;nc=00000001,&nbsp;cnonce=&quot;8a73e564f4fbccce&quot;
+Upgrade-Insecure-Requests:&nbsp;1
+User-Agent:&nbsp;Mozilla/5.0&nbsp;(Windows&nbsp;NT&nbsp;6.1)&nbsp;AppleWebKit/537.36&nbsp;(KHTML,&nbsp;like&nbsp;Gecko)&nbsp;Chrome/55.0.2883.87&nbsp;Safari/537.36
+Accept:&nbsp;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:&nbsp;gzip,&nbsp;deflate,&nbsp;sdch,&nbsp;br
+Accept-Language:&nbsp;zh-CN,zh;q=0.8</pre>
+<p>服务器主要关心response是怎么计算出来的，然后比较一下就可以验证了</p>
+<p>要注意的是</p>
+<ol class=" list-paddingleft-2" style="list-style-type: decimal;">
+<li>
+<p>防止cnonce重复，这样就能防住抓包重发的情况了</p>
+</li>
+<li>
+<p>nonce要和IP，时间相关</p>
+</li>
+</ol>
+<p>response的计算方式</p>
+<pre class="brush:bash;toolbar:false">A1=md5(user:realm:password)
+A2=md5(http_method:uri)&nbsp;其中http_method只有两个值GET或者POST&nbsp;uri不包括域名和端口&nbsp;形如/test.jpg
+response=md5(A1:nonce:nc:cnonce:qop:A2)</pre>
 <p></p>
-<h1>查看Linux内核版本、GCC编译版本<br /></h1>
-<pre class="brush:bash;toolbar:false">cat&nbsp;/proc/version</pre>
-<p>会显示类似</p>
-<pre class="brush:bash;toolbar:false">Linux&nbsp;version&nbsp;2.6.32-358.el6.x86_64&nbsp;(mockbuild@c6b8.bsys.dev.centos.org)&nbsp;(gcc&nbsp;version&nbsp;4.4.7&nbsp;20120313&nbsp;(Red&nbsp;Hat&nbsp;4.4.7-3)&nbsp;(GCC)&nbsp;)&nbsp;#1&nbsp;SMP&nbsp;Fri&nbsp;Feb&nbsp;22&nbsp;00:31:26&nbsp;UTC&nbsp;2013</pre>
+<p>每次收到的报文</p>
+<pre class="brush:bash;toolbar:false">Digest&nbsp;username=&quot;admin&quot;,&nbsp;realm=&quot;127.0.0.1:9902&quot;,&nbsp;nonce=&quot;xx&quot;,&nbsp;uri=&quot;/&quot;,&nbsp;response=&quot;2c84eedd545f75aa2aa7760c32b135ee&quot;,&nbsp;opaque=&quot;xx&quot;,&nbsp;qop=auth,&nbsp;nc=00000001,&nbsp;cnonce=&quot;22b87e9c17808aff&quot;
+Digest&nbsp;username=&quot;admin&quot;,&nbsp;realm=&quot;127.0.0.1:9902&quot;,&nbsp;nonce=&quot;xx&quot;,&nbsp;uri=&quot;/jquery-1.5.2.min.js&quot;,&nbsp;response=&quot;499c0f0033c56a0da02840a52ac3deeb&quot;,&nbsp;opaque=&quot;xx&quot;,&nbsp;qop=auth,&nbsp;nc=00000002,&nbsp;cnonce=&quot;374871bf2abd5755&quot;
+Digest&nbsp;username=&quot;admin&quot;,&nbsp;realm=&quot;127.0.0.1:9902&quot;,&nbsp;nonce=&quot;xx&quot;,&nbsp;uri=&quot;/web_api.js&quot;,&nbsp;response=&quot;21dee8343714528561eb26963fcf59ff&quot;,&nbsp;opaque=&quot;xx&quot;,&nbsp;qop=auth,&nbsp;nc=00000003,&nbsp;cnonce=&quot;9215aadd53c59f9c&quot;
+Digest&nbsp;username=&quot;admin&quot;,&nbsp;realm=&quot;127.0.0.1:9902&quot;,&nbsp;nonce=&quot;xx&quot;,&nbsp;uri=&quot;/addlivechannel.htm&quot;,&nbsp;response=&quot;142c115f83f65461d55fc5d3ade49fe9&quot;,&nbsp;opaque=&quot;xx&quot;,&nbsp;qop=auth,&nbsp;nc=0000000d,&nbsp;cnonce=&quot;52acec6165fc7f93&quot;</pre>
 <p></p>
-<p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/591">centos查看版本号</a></p>
+<p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/639">Digest认证模式</a></p>
 
       
 <div class="article-social">
-			<a href="javascript:;" data-action="ding" data-id="591" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a>	
+			<a href="javascript:;" data-action="ding" data-id="639" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a>	
 </div>
 	</article>	
 				<footer class="article-footer">
 			</footer>
 	<nav class="article-nav">
-			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/588" rel="prev">redis-cli查看redis数据</a></span>
-			<span class="article-nav-next"><a href="                     /archives/593" rel="next">centos5.8构建本地yum源</a>  <i class="fa fa-angle-double-right"></i></span>
+			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/637" rel="prev">Linux下system命令执行脚本代码</a></span>
+			<span class="article-nav-next"></span>
 		</nav>
 
 		<div class="related_top">
 			<div class="related_posts"><ul class="related_img">
 
 	<li class="related_box"  >
-		<a href="                     /archives/639" title="Digest认证模式" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_143.html                                                                                                             " alt="Digest认证模式" /><br><span class="r_title">Digest认证模式</span></a>
-		</li>
-	
-	<li class="related_box"  >
 		<a href="                     /archives/637" title="Linux下system命令执行脚本代码" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_46223.html                                                                                                           " alt="Linux下system命令执行脚本代码" /><br><span class="r_title">Linux下system命令执行脚本代码</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="Linux下system命令执行脚本代码" /><br><span class="r_title">Linux下system命令执行脚本代码</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/635" title="curl的结果保存到bash变量" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="curl的结果保存到bash变量" /><br><span class="r_title">curl的结果保存到bash变量</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_36608.html                                                                                                            " alt="curl的结果保存到bash变量" /><br><span class="r_title">curl的结果保存到bash变量</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/633" title="VC选择文件夹提示框" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_46223.html                                                                                                           " alt="VC选择文件夹提示框" /><br><span class="r_title">VC选择文件夹提示框</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="VC选择文件夹提示框" /><br><span class="r_title">VC选择文件夹提示框</span></a>
+		</li>
+	
+	<li class="related_box"  >
+		<a href="                     /archives/631" title="CComboBox设置下拉框高度" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_36608.html                                                                                                            " alt="CComboBox设置下拉框高度" /><br><span class="r_title">CComboBox设置下拉框高度</span></a>
 		</li>
 	</ul>
 
 <div class="relates">
 <ul>
-<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/639">Digest认证模式</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/637">Linux下system命令执行脚本代码</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/635">curl的结果保存到bash变量</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/633">VC选择文件夹提示框</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/631">CComboBox设置下拉框高度</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/628">nginx编译</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/626">nginx前台启动 关闭master进程</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/623">sqlite使用实例</a></li>
+<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/637">Linux下system命令执行脚本代码</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/635">curl的结果保存到bash变量</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/633">VC选择文件夹提示框</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/631">CComboBox设置下拉框高度</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/628">nginx编译</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/626">nginx前台启动 关闭master进程</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/623">sqlite使用实例</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/621">mp4流化</a></li>
 </ul></div></div>		</div>
 									</div>
 </div>
