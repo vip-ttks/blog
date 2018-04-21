@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<title>VC 获取系统特殊路径 &#8211; 远道者的博客</title>
+<title>FLV视频文件流化 &#8211; 远道者的博客</title>
 <script>
 window._deel = {name: '远道者的博客',url: '                     /wp-content/themes/yusi1.0', ajaxpager: '', commenton: 0, roll: [0,0]}
 </script>
@@ -32,17 +32,16 @@ img.emoji {
 <script type='text/javascript' src='//libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=1.0'></script>
 <script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_28329.js                       '></script>
 <link rel='https://api.w.org/' href='                     /wp-json/' />
-<link rel='prev' title='html a标签' href='                     /archives/45' />
-<link rel='next' title='配合静态化' href='                     /archives/52' />
-<link rel="canonical" href="                     /archives/47" />
-<link rel='shortlink' href='/index_22874.html          ' />
-<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_1058.html                                                       " />
-<link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F47&#038;format=xml" />
+<link rel='prev' title='Digest认证模式' href='                     /archives/639' />
+<link rel="canonical" href="                     /archives/649" />
+<link rel='shortlink' href='/index_53611.html           ' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_10406.html                                                       " />
+<link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F649&#038;format=xml" />
 <script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="工作技术">
-<meta name="description" content="在Windows编程中通常需要获取一些特殊路径，例如系统临时文件夹路径，系统DATA路径，当期用户的home路径等等，这些都可以调用API函数来获取SHGetSpecialFolderPath下面是我的一个函数，获取系统APPDATA路径，然后在改目录下面创建了一个yuntu目录，生成了我的配置文件存放全路径#include&nbsp;&lt;Winspool.h&gt; #include&nbsp;&lt;shlobj.h&gt; #">
+<meta name="description" content="通常使用ffmpeg转码出来的FLV文件，是不能当成流媒体文件播放的，比如边下载边播放。需要流化一下，就是添加关键帧信息。可以使用yamdi工具来流化，例如有一个文件叫src.flv要流化成dst.flv可以用如下命令：./yamdi&nbsp;-i&nbsp;src.flv&nbsp;-o&nbsp;dst.flvyamdi工具的下载地址http://lei.cool/doc/yamdi.zip">
 <!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]-->
 </head>
-<body class="post-template-default single single-post postid-47 single-format-standard">
+<body class="post-template-default single single-post postid-649 single-format-standard">
 
 <header id="header" class="header">
 <div class="container-inner">
@@ -75,79 +74,60 @@ img.emoji {
 	<div class="content">
 
 				<header class="article-header">
-			<h1 class="article-title"><a href="                     /archives/47">VC 获取系统特殊路径</a></h1>
+			<h1 class="article-title"><a href="                     /archives/649">FLV视频文件流化</a></h1>
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af"> 工作技术</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-				<time class="muted"><i class="fa fa-clock-o"></i> 1年前 (2017-04-17)</time>
-				<span class="muted"><i class="fa fa-eye"></i> 70℃</span>
+				<time class="muted"><i class="fa fa-clock-o"></i> 3分钟前</time>
+				<span class="muted"><i class="fa fa-eye"></i> 3℃</span>
 											</div>
 		</header>
 		<article class="article-content">
-			<p>在Windows编程中通常需要获取一些特殊路径，例如系统临时文件夹路径，系统DATA路径，当期用户的home路径等等，这些都可以调用API函数来获取SHGetSpecialFolderPath</p>
-<p>下面是我的一个函数，获取系统APPDATA路径，然后在改目录下面创建了一个yuntu目录，生成了我的配置文件存放全路径</p>
-<pre class="brush:cpp;toolbar:false">#include&nbsp;&lt;Winspool.h&gt;
-#include&nbsp;&lt;shlobj.h&gt;
-#include&nbsp;&lt;shlwapi.h&gt;
-#pragma&nbsp;comment(lib,&quot;Shell32.lib&quot;)
-string&nbsp;GetConfigPath()
-{
-	static&nbsp;string&nbsp;gConfigPath;
-	if(gConfigPath.empty())
-	{
-		char&nbsp;buf[10240]={0};
-		SHGetSpecialFolderPathA(0,buf,CSIDL_APPDATA,TRUE);
-		sprintf(buf+strlen(buf),&quot;\\%s&quot;,&quot;yuntu&quot;);
-		if(!PathFileExistsA(buf))
-		{
-			::CreateDirectoryA(buf,0);
-		}
-		sprintf(buf+strlen(buf),&quot;\\%s&quot;,&quot;config.db&quot;);
-		gConfigPath=buf;
-	}
-	return&nbsp;gConfigPath;
-}</pre>
+			<p>通常使用ffmpeg转码出来的FLV文件，是不能当成流媒体文件播放的，比如边下载边播放。需要流化一下，就是添加关键帧信息。</p>
+<p>可以使用yamdi工具来流化，例如有一个文件叫src.flv要流化成dst.flv可以用如下命令：</p>
+<pre class="brush:bash;toolbar:false">./yamdi&nbsp;-i&nbsp;src.flv&nbsp;-o&nbsp;dst.flv</pre>
+<p>yamdi工具的下载地址<a href="http://lei.cool/doc/yamdi.zip" target="_blank">http://lei.cool/doc/yamdi.zip</a></p>
 <p></p>
-<p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/47">VC 获取系统特殊路径</a></p>
+<p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/649">FLV视频文件流化</a></p>
 
       
 <div class="article-social">
-			<a href="javascript:;" data-action="ding" data-id="47" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a>	
+			<a href="javascript:;" data-action="ding" data-id="649" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a>	
 </div>
 	</article>	
 				<footer class="article-footer">
 			</footer>
 	<nav class="article-nav">
-			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/45" rel="prev">html a标签</a></span>
-			<span class="article-nav-next"><a href="                     /archives/52" rel="next">配合静态化</a>  <i class="fa fa-angle-double-right"></i></span>
+			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/639" rel="prev">Digest认证模式</a></span>
+			<span class="article-nav-next"></span>
 		</nav>
 
 		<div class="related_top">
 			<div class="related_posts"><ul class="related_img">
 
 	<li class="related_box"  >
-		<a href="                     /archives/649" title="FLV视频文件流化" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_143.html                                                                                                             " alt="FLV视频文件流化" /><br><span class="r_title">FLV视频文件流化</span></a>
-		</li>
-	
-	<li class="related_box"  >
 		<a href="                     /archives/639" title="Digest认证模式" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_23183.html                                                                                                           " alt="Digest认证模式" /><br><span class="r_title">Digest认证模式</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_9868.html                                                                                                            " alt="Digest认证模式" /><br><span class="r_title">Digest认证模式</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/637" title="Linux下system命令执行脚本代码" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_13967.html                                                                                                           " alt="Linux下system命令执行脚本代码" /><br><span class="r_title">Linux下system命令执行脚本代码</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_23183.html                                                                                                           " alt="Linux下system命令执行脚本代码" /><br><span class="r_title">Linux下system命令执行脚本代码</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/635" title="curl的结果保存到bash变量" target="_blank">
 		<img src="/wp-content/themes/yusi1.0/timthumb_13967.html                                                                                                           " alt="curl的结果保存到bash变量" /><br><span class="r_title">curl的结果保存到bash变量</span></a>
 		</li>
+	
+	<li class="related_box"  >
+		<a href="                     /archives/633" title="VC选择文件夹提示框" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_143.html                                                                                                             " alt="VC选择文件夹提示框" /><br><span class="r_title">VC选择文件夹提示框</span></a>
+		</li>
 	</ul>
 
 <div class="relates">
 <ul>
-<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/649">FLV视频文件流化</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/639">Digest认证模式</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/637">Linux下system命令执行脚本代码</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/635">curl的结果保存到bash变量</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/633">VC选择文件夹提示框</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/631">CComboBox设置下拉框高度</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/628">nginx编译</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/626">nginx前台启动 关闭master进程</a></li>
+<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/639">Digest认证模式</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/637">Linux下system命令执行脚本代码</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/635">curl的结果保存到bash变量</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/633">VC选择文件夹提示框</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/631">CComboBox设置下拉框高度</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/628">nginx编译</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/626">nginx前台启动 关闭master进程</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/623">sqlite使用实例</a></li>
 </ul></div></div>		</div>
 									</div>
 </div>
