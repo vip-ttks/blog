@@ -10,12 +10,12 @@
         var isCaller = window.location.href.split('#')[1];
 
         // 与信令服务器的WebSocket连接
-        var socket = new WebSocket("ws://192.168.3.17:3000");
+        var socket = new WebSocket("ws://117.27.146.91:3000");
 
         // stun和turn服务器
         var iceServer = {
             "iceServers": [{
-                "url": "stun:stun.l.google.com:19302"
+                "url": "stun.freeswitch.org"
             }, {
                 "url": "turn:numb.viagenie.ca",
                 "username": "webrtc@live.com",
