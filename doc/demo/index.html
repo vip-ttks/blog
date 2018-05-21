@@ -76,8 +76,8 @@
         
 
         navigator.getUserMedia({
-            "audio": true,
-            "video": true
+            audio: true,
+            video: {width: {exact: 640}, height: {exact: 480}}
         }, function(stream){
             //绑定本地媒体流到video标签用于输出
             document.getElementById('localVideo').src = URL.createObjectURL(stream);
