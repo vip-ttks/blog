@@ -19,7 +19,20 @@
         var isCaller = window.location.href.split('#')[1];
 
         // 与信令服务器的WebSocket连接
-        var socket = new WebSocket("wss://ser.lei.cool:3000");
+        var socket = new WebSocket("wss://pub.lei.cool:3000");
+        
+        socket.onopen = function()
+        {
+           if(isCaller)
+            {
+                socket.send(JSON.stringify({"event": "offer"}));
+            }
+            else
+            {
+                socket.send(JSON.stringify({"event": "answer"}));
+            }
+        };
+        
 
         // stun和turn服务器
         var iceServer = {
@@ -76,8 +89,8 @@
         
 
         navigator.getUserMedia({
-            audio: true,
-            video: {width: {exact: 640}, height: {exact: 480}}
+            "audio": true,
+            "video": true
         }, function(stream){
             //绑定本地媒体流到video标签用于输出
             document.getElementById('localVideo').src = URL.createObjectURL(stream);
