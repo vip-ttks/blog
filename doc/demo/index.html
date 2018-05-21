@@ -4,16 +4,8 @@
     <video id="localVideo" autoplay></video><br>
     Remote: <br>
     <video id="remoteVideo" autoplay></video>
-
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script>
-        var PeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-        var SessionDescription = window.RTCSessionDescription || window.mozRTCSessionDescription || window.webkitRTCSessionDescription;
-        navigator.getUserMedia = navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia;
-        var GET_USER_MEDIA = navigator.getUserMedia ? "getUserMedia" :
-                             navigator.mozGetUserMedia ? "mozGetUserMedia" :
-                             navigator.webkitGetUserMedia ? "webkitGetUserMedia" : "getUserMedia";
                      
         // 仅仅用于控制哪一端的浏览器发起offer，#号后面有值的一方发起
         var isCaller = window.location.href.split('#')[1];
@@ -33,7 +25,7 @@
         };
 
         // 创建PeerConnection实例 (参数为null则没有iceserver，即使没有stunserver和turnserver，仍可在局域网下通讯)
-        var pc = new PeerConnection(iceServer);
+        var pc = new RTCPeerConnection(iceServer);
 
         // 发送ICE候选到其他客户端
         pc.onicecandidate = function(event){
@@ -48,8 +40,8 @@
         };
 
         // 如果检测到媒体流连接到本地，将其绑定到一个video标签上输出
-        pc.onaddstream = function(event){
-            document.getElementById('remoteVideo').src = URL.createObjectURL(event.stream);
+        pc.ontrack = function(event){
+            document.getElementById('remoteVideo').src = URL.createObjectURL(event.stream[0]);
         };
 
         // 发送offer和answer的函数，发送本地session描述
@@ -75,7 +67,7 @@
         // 获取本地音频和视频流
         
 
-        navigator.getUserMedia({
+        navigator.mediaDevices.getUserMedia({
             "audio": true,
             "video": true
         }, function(stream){
