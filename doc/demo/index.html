@@ -4,9 +4,8 @@
     <video id="localVideo" autoplay></video><br>
     Remote: <br>
     <video id="remoteVideo" autoplay></video>
-    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
     <script>
-                     
         // 仅仅用于控制哪一端的浏览器发起offer，#号后面有值的一方发起
         var isCaller = window.location.href.split('#')[1];
 
@@ -16,7 +15,7 @@
         // stun和turn服务器
         var iceServer = {
             "iceServers": [{
-                "url": "stun:stun.freeswitch.org"
+                "url": "stun:stun.l.google.com:19302"
             }, {
                 "url": "turn:numb.viagenie.ca",
                 "username": "webrtc@live.com",
@@ -25,7 +24,7 @@
         };
 
         // 创建PeerConnection实例 (参数为null则没有iceserver，即使没有stunserver和turnserver，仍可在局域网下通讯)
-        var pc = new RTCPeerConnection(iceServer);
+        var pc = new webkitRTCPeerConnection(iceServer);
 
         // 发送ICE候选到其他客户端
         pc.onicecandidate = function(event){
@@ -40,8 +39,8 @@
         };
 
         // 如果检测到媒体流连接到本地，将其绑定到一个video标签上输出
-        pc.ontrack = function(event){
-            document.getElementById('remoteVideo').srcObject = event.stream[0];
+        pc.onaddstream = function(event){
+            document.getElementById('remoteVideo').src = URL.createObjectURL(event.stream);
         };
 
         // 发送offer和answer的函数，发送本地session描述
@@ -65,14 +64,12 @@
         };
 
         // 获取本地音频和视频流
-        
-
-        navigator.mediaDevices.getUserMedia({
+        navigator.webkitGetUserMedia({
             "audio": true,
             "video": true
         }, function(stream){
             //绑定本地媒体流到video标签用于输出
-            document.getElementById('localVideo').srcObject = stream;
+            document.getElementById('localVideo').src = URL.createObjectURL(stream);
             //向PeerConnection中加入需要发送的流
             pc.addStream(stream);
             //如果是发起方则发送一个offer信令
