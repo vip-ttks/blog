@@ -41,7 +41,7 @@
 
         // 如果检测到媒体流连接到本地，将其绑定到一个video标签上输出
         pc.ontrack = function(event){
-            document.getElementById('remoteVideo').src = URL.createObjectURL(event.stream[0]);
+            document.getElementById('remoteVideo').srcObject = event.stream[0];
         };
 
         // 发送offer和answer的函数，发送本地session描述
@@ -72,7 +72,7 @@
             "video": true
         }, function(stream){
             //绑定本地媒体流到video标签用于输出
-            document.getElementById('localVideo').src = URL.createObjectURL(stream);
+            document.getElementById('localVideo').srcObject = stream;
             //向PeerConnection中加入需要发送的流
             pc.addStream(stream);
             //如果是发起方则发送一个offer信令
