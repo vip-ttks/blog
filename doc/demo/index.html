@@ -64,7 +64,11 @@
         };
 
         // 获取本地音频和视频流
-        navigator.webkitGetUserMedia({
+        navigator.getUserMedia = navigator.getUserMedia ||
+                         navigator.webkitGetUserMedia ||
+                         navigator.mozGetUserMedia;
+
+        navigator.getUserMedia({
             "audio": true,
             "video": true
         }, function(stream){
