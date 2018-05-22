@@ -14,11 +14,11 @@
                              navigator.webkitGetUserMedia ? "webkitGetUserMedia" : "getUserMedia";
 
         // 与信令服务器的WebSocket连接
-        var socket = new WebSocket("wss://127.0.0.1:3000");
+        var socket = new WebSocket("wss://pub.lei.cool:3000");
         
         socket.onopen = function()
         {
-            socket.send(JSON.stringify({"event": "answer"}));
+            socket.send(JSON.stringify({"event": "offer"}));
         };
         
 
@@ -54,10 +54,10 @@
         };
 
         // 发送offer和answer的函数，发送本地session描述
-        var sendAnswerFn = function(desc){
+        var sendOfferFn = function(desc){
             pc.setLocalDescription(desc);
             socket.send(JSON.stringify({ 
-                "event": "_answer",
+                "event": "_offer",
                 "data": {
                     "sdp": desc
                 }
@@ -73,6 +73,12 @@
         }, function(stream){
             //向PeerConnection中加入需要发送的流
             pc.addStream(stream);
+            //如果是发起方则发送一个offer信令
+            {
+                pc.createOffer(sendOfferFn, function (error) {
+                    console.log('Failure callback: ' + error);
+                });
+            }
         }, function(error){
             //处理媒体流创建失败错误
             console.log('getUserMedia error: ' + error);
