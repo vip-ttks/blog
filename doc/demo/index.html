@@ -1,4 +1,7 @@
 <html>
+<head>
+    <title>user</title>
+  </head>
 <body>
     Remote: <br>
     <video id="remoteVideo" autoplay></video>
@@ -12,7 +15,7 @@
         var GET_USER_MEDIA = navigator.getUserMedia ? "getUserMedia" :
                              navigator.mozGetUserMedia ? "mozGetUserMedia" :
                              navigator.webkitGetUserMedia ? "webkitGetUserMedia" : "getUserMedia";
-
+                     
         // 与信令服务器的WebSocket连接
         var socket = new WebSocket("wss://pub.lei.cool:3000");
         
@@ -66,17 +69,6 @@
 
         // 获取本地音频和视频流
         
-
-        navigator.getUserMedia({
-            "audio": true,
-            "video": true
-        }, function(stream){
-            //向PeerConnection中加入需要发送的流
-            pc.addStream(stream);
-        }, function(error){
-            //处理媒体流创建失败错误
-            console.log('getUserMedia error: ' + error);
-        });
 
         //处理到来的信令
         socket.onmessage = function(event){

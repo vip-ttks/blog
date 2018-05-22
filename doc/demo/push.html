@@ -1,7 +1,10 @@
 <html>
+<head>
+    <title>server</title>
+  </head>
 <body>
-    Remote: <br>
-    <video id="remoteVideo" autoplay></video>
+    Local: <br>
+    <video id="localVideo" autoplay></video><br>
 
     <script>
         var PeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
@@ -12,7 +15,7 @@
         var GET_USER_MEDIA = navigator.getUserMedia ? "getUserMedia" :
                              navigator.mozGetUserMedia ? "mozGetUserMedia" :
                              navigator.webkitGetUserMedia ? "webkitGetUserMedia" : "getUserMedia";
-
+                     
         // 与信令服务器的WebSocket连接
         var socket = new WebSocket("wss://pub.lei.cool:3000");
         
@@ -50,7 +53,7 @@
 
         // 如果检测到媒体流连接到本地，将其绑定到一个video标签上输出
         pc.onaddstream = function(event){
-            document.getElementById('remoteVideo').src = URL.createObjectURL(event.stream);
+            //document.getElementById('remoteVideo').src = URL.createObjectURL(event.stream);
         };
 
         // 发送offer和answer的函数，发送本地session描述
@@ -71,6 +74,8 @@
             "audio": true,
             "video": true
         }, function(stream){
+            //绑定本地媒体流到video标签用于输出
+            document.getElementById('localVideo').src = URL.createObjectURL(stream);
             //向PeerConnection中加入需要发送的流
             pc.addStream(stream);
             //如果是发起方则发送一个offer信令
