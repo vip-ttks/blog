@@ -35,6 +35,7 @@
         
 
         // stun和turn服务器
+        /*
         var iceServer = {
             "iceServers": [{
                 "url": "stun:103.45.19.179:3478"
@@ -43,7 +44,19 @@
                 "username": "webrtc@live.com",
                 "credential": "muazkh"
             }]
-        };
+        };*/
+        var iceServer = {
+              "iceServers": [
+              {
+                "urls": "stun:mmt-stun.verkstad.net"
+              },
+              {
+                "urls": "turn:mmt-turn.verkstad.net",
+                "username": "webrtc",
+                "credential": "secret"
+              }
+              ]
+            };
 
         // 创建PeerConnection实例 (参数为null则没有iceserver，即使没有stunserver和turnserver，仍可在局域网下通讯)
         var pc = new PeerConnection(iceServer);
