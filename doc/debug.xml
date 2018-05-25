@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<timeTable>
-<item name='2018-05-25' date='20180525'>
+<timeTable timeZone="32400">
+  <item name='2018-05-25' date='20180525'>
 <prgItem><time>10:58-11:03</time><name>demorecord2018-05-25 2018:05-25:10</name></prgItem>
 <prgItem><time>11:03-11:08</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
 <prgItem><time>11:08-11:13</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
