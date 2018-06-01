@@ -34,6 +34,7 @@ img.emoji {
 <script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_28329.js                       '></script>
 <link rel='https://api.w.org/' href='                     /wp-json/' />
 <link rel='prev' title='反汇编相关' href='                     /archives/666' />
+<link rel='next' title='bat脚本启动后进入当前目录' href='                     /archives/671' />
 <link rel="canonical" href="                     /archives/669" />
 <link rel='shortlink' href='/index_23912.html           ' />
 <link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_42149.html                                                       " />
@@ -78,8 +79,8 @@ img.emoji {
 			<h1 class="article-title"><a href="                     /archives/669">设置程序管理员权限启动</a></h1>
 			<div class="meta">
 				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/uncategorized"> 未分类</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-				<time class="muted"><i class="fa fa-clock-o"></i> 2分钟前</time>
-				<span class="muted"><i class="fa fa-eye"></i> 2℃</span>
+				<time class="muted"><i class="fa fa-clock-o"></i> 2周前 (05-18)</time>
+				<span class="muted"><i class="fa fa-eye"></i> 7℃</span>
 											</div>
 		</header>
 		<article class="article-content">
@@ -87,7 +88,8 @@ img.emoji {
 <p>第一种：程序右键属性 -》兼容性 选择以管理员身份运行</p>
 <p>第二种：通过注册表的方式如下</p>
 <pre class="brush:bash;toolbar:false">REG&nbsp;ADD&nbsp;&quot;HKCU\SOFTWARE\Microsoft\Windows&nbsp;NT\CurrentVersion\AppCompatFlags\Layers&quot;&nbsp;/v&nbsp;&quot;C:\Program&nbsp;Files\demo\demo.exe&quot;&nbsp;/t&nbsp;REG_SZ&nbsp;/d&nbsp;RUNASADMIN&nbsp;&nbsp;/f</pre>
-<p></p>
+<p>如果要取消管理员权限运行如下</p>
+<pre class="brush:bash;toolbar:false">REG&nbsp;DELETE&nbsp;&quot;HKCU\SOFTWARE\Microsoft\Windows&nbsp;NT\CurrentVersion\AppCompatFlags\Layers&quot;&nbsp;/v&nbsp;&quot;C:\Program&nbsp;Files\1905\1905atm\1905NTS.exe&quot;&nbsp;/f</pre>
 <p>如果是bat命令行脚本的话</p>
 <p>可以用如下代码</p>
 <pre class="brush:bash;toolbar:false">@echo&nbsp;off&nbsp;&nbsp;
@@ -126,7 +128,7 @@ if&nbsp;&#39;%errorlevel%&#39;&nbsp;NEQ&nbsp;&#39;0&#39;&nbsp;(&nbsp;&nbsp;
 			</footer>
 	<nav class="article-nav">
 			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/666" rel="prev">反汇编相关</a></span>
-			<span class="article-nav-next"></span>
+			<span class="article-nav-next"><a href="                     /archives/671" rel="next">bat脚本启动后进入当前目录</a>  <i class="fa fa-angle-double-right"></i></span>
 		</nav>
 
 		<div class="related_top">
@@ -134,22 +136,22 @@ if&nbsp;&#39;%errorlevel%&#39;&nbsp;NEQ&nbsp;&#39;0&#39;&nbsp;(&nbsp;&nbsp;
 
 	<li class="related_box"  >
 		<a href="                     /archives/520" title="WordPress静态化后放到GitHub" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="WordPress静态化后放到GitHub" /><br><span class="r_title">WordPress静态化后放到GitHub</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_9868.html                                                                                                            " alt="WordPress静态化后放到GitHub" /><br><span class="r_title">WordPress静态化后放到GitHub</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/467" title="动态IP但是不能联网" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_9868.html                                                                                                            " alt="动态IP但是不能联网" /><br><span class="r_title">动态IP但是不能联网</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="动态IP但是不能联网" /><br><span class="r_title">动态IP但是不能联网</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/464" title="gcc编译的时候指定大端或者小端" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_13967.html                                                                                                           " alt="gcc编译的时候指定大端或者小端" /><br><span class="r_title">gcc编译的时候指定大端或者小端</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_143.html                                                                                                             " alt="gcc编译的时候指定大端或者小端" /><br><span class="r_title">gcc编译的时候指定大端或者小端</span></a>
 		</li>
 	
 	<li class="related_box"  >
 		<a href="                     /archives/462" title="爱奇艺视频地址抓取" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_36608.html                                                                                                            " alt="爱奇艺视频地址抓取" /><br><span class="r_title">爱奇艺视频地址抓取</span></a>
+		<img src="/wp-content/themes/yusi1.0/timthumb_23183.html                                                                                                           " alt="爱奇艺视频地址抓取" /><br><span class="r_title">爱奇艺视频地址抓取</span></a>
 		</li>
 	</ul>
 
@@ -163,24 +165,15 @@ if&nbsp;&#39;%errorlevel%&#39;&nbsp;NEQ&nbsp;&#39;0&#39;&nbsp;(&nbsp;&nbsp;
 <div class="widget widget_text"><div class="textwidget"><div class="social">
 </div></div></div>
 
-		<div class="widget widget_recent_entries">		<div class="title"><h2>近期文章</h2></div>		<ul>
-					<li>
-				<a href="                     /archives/669">设置程序管理员权限启动</a>
-						</li>
-					<li>
-				<a href="                     /archives/666">反汇编相关</a>
-						</li>
-					<li>
-				<a href="                     /archives/654">皮囊</a>
-						</li>
-					<li>
-				<a href="                     /archives/651">MooseFs冗余设置</a>
-						</li>
-					<li>
-				<a href="                     /archives/649">FLV视频文件流化</a>
-						</li>
-				</ul>
-		</div>		</aside></section>
+<div class="widget widget_categories"><div class="title"><h2>分类目录</h2></div>		<ul>
+	<li class="cat-item cat-item-9"><a href="                     /archives/category/c" >C/C++基础</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af" >工作技术</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="                     /archives/category/uncategorized" >未分类</a>
+</li>
+		</ul>
+</div></aside></section>
 <footer class="footer">
     <div class="footer-inner">
         <div class="copyright pull-left">
