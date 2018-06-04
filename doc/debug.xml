@@ -1,65 +1,274 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<timeTable timeZone="32400">
-  <item name='2018-05-25' date='20180525'>
-<prgItem><time>10:58-11:03</time><name>demorecord2018-05-25 2018:05-25:10</name></prgItem>
-<prgItem><time>11:03-11:08</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:08-11:13</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:13-11:18</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:18-11:23</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:23-11:28</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:28-11:33</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:33-11:38</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:38-11:43</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:43-11:48</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:48-11:53</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:53-11:58</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>11:58-12:03</time><name>demorecord2018-05-25 2018:05-25:11</name></prgItem>
-<prgItem><time>12:03-12:08</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:08-12:13</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:13-12:18</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:18-12:23</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:23-12:28</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:28-12:33</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:33-12:38</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:38-12:43</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:43-12:48</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:48-12:53</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:53-12:58</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>12:58-13:03</time><name>demorecord2018-05-25 2018:05-25:12</name></prgItem>
-<prgItem><time>13:03-13:08</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:08-13:13</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:13-13:18</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:18-13:23</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:23-13:28</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:28-13:33</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:33-13:38</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:38-13:43</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:43-13:48</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:48-13:53</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:53-13:58</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>13:58-14:03</time><name>demorecord2018-05-25 2018:05-25:13</name></prgItem>
-<prgItem><time>14:03-14:08</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:08-14:13</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:13-14:18</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:18-14:23</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:23-14:28</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:28-14:33</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:33-14:38</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:38-14:43</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:43-14:48</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:48-14:53</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:53-14:58</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>14:58-15:03</time><name>demorecord2018-05-25 2018:05-25:14</name></prgItem>
-<prgItem><time>15:03-15:08</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:08-15:13</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:13-15:18</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:18-15:23</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:23-15:28</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:28-15:33</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:33-15:38</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:38-15:43</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:43-15:48</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:48-15:53</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-<prgItem><time>15:53-15:58</time><name>demorecord2018-05-25 2018:05-25:15</name></prgItem>
-</item>
+<?xml version="1.0" encoding="utf-8"?>
+<timeTable>
+  <item name="2018-06-03" date="20180603">
+    <prgItem>
+      <time>00:15-05:00</time>
+      <name>400회 특집 유희열의 스케치북</name>
+    </prgItem>
+    <prgItem>
+      <time>05:00-05:55</time>
+      <name>다큐 공감(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>05:55-07:10</time>
+      <name>생생정보 스페셜</name>
+    </prgItem>
+    <prgItem>
+      <time>07:10-07:20</time>
+      <name>KBS 재난방송센터</name>
+    </prgItem>
+    <prgItem>
+      <time>07:20-07:50</time>
+      <name>영상앨범 산</name>
+    </prgItem>
+    <prgItem>
+      <time>07:50-08:55</time>
+      <name>살림하는 남자들(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>08:55-10:25</time>
+      <name>1박 2일</name>
+    </prgItem>
+    <prgItem>
+      <time>10:25-11:50</time>
+      <name>1%의 우정(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>11:50-13:20</time>
+      <name>해피투게더(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>13:20-14:25</time>
+      <name>슈츠(11회)(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>14:25-15:30</time>
+      <name>슈츠(12회)(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>15:30-16:50</time>
+      <name>같이 살래요(23회)(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>16:50-19:55</time>
+      <name>해피 선데이</name>
+    </prgItem>
+    <prgItem>
+      <time>19:55-21:15</time>
+      <name>같이 살래요(24회)</name>
+    </prgItem>
+    <prgItem>
+      <time>21:15-22:20</time>
+      <name>개그 콘서트</name>
+    </prgItem>
+    <prgItem>
+      <time>22:20-01:00</time>
+      <name>다큐멘터리 3일</name>
+    </prgItem>
+  </item>
+  <item name="2018-06-04" date="20180604">
+    <prgItem>
+      <time>01:00-02:00</time>
+      <name>영화가 좋다(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>02:00-05:00</time>
+      <name>KBS 재난방송센터(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>05:00-05:05</time>
+      <name>숨터(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>05:05-06:00</time>
+      <name>걸어서 세계 속으로(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>06:00-07:00</time>
+      <name>생방송 아침이 좋다</name>
+    </prgItem>
+    <prgItem>
+      <time>07:00-08:00</time>
+      <name>생방송 아침이 좋다</name>
+    </prgItem>
+    <prgItem>
+      <time>08:00-09:00</time>
+      <name>KBS 아침 뉴스타임</name>
+    </prgItem>
+    <prgItem>
+      <time>09:00-09:40</time>
+      <name>TV소설 파도야 파도야(74회)</name>
+    </prgItem>
+    <prgItem>
+      <time>09:40-10:40</time>
+      <name>여유만만</name>
+    </prgItem>
+    <prgItem>
+      <time>10:40-11:00</time>
+      <name>지구촌 뉴스</name>
+    </prgItem>
+    <prgItem>
+      <time>11:00-13:00</time>
+      <name>우리가 만난 기적(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>13:00-14:00</time>
+      <name>다큐멘터리 3일(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>14:00-14:10</time>
+      <name>KBS 뉴스타임</name>
+    </prgItem>
+    <prgItem>
+      <time>14:10-15:00</time>
+      <name>영화가 좋다(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>15:00-15:30</time>
+      <name>자동공부책상 위키 2</name>
+    </prgItem>
+    <prgItem>
+      <time>15:30-16:00</time>
+      <name>TV 유치원</name>
+    </prgItem>
+    <prgItem>
+      <time>16:00-17:00</time>
+      <name>여유만만(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>17:00-18:00</time>
+      <name>살림하는 남자들(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>18:00-18:30</time>
+      <name>KBS 경제타임</name>
+    </prgItem>
+    <prgItem>
+      <time>18:30-19:50</time>
+      <name>2TV 생생정보</name>
+    </prgItem>
+    <prgItem>
+      <time>19:50-20:30</time>
+      <name>인형의 집</name>
+    </prgItem>
+    <prgItem>
+      <time>20:30-20:55</time>
+      <name>글로벌24</name>
+    </prgItem>
+    <prgItem>
+      <time>20:55-22:00</time>
+      <name>제보자들</name>
+    </prgItem>
+    <prgItem>
+      <time>22:00-00:35</time>
+      <name>너도 인간이니?</name>
+    </prgItem>
+  </item>
+  <item name="2018-06-05" date="20180605">
+    <prgItem>
+      <time>00:35-01:00</time>
+      <name>스포츠 하이라이트</name>
+    </prgItem>
+    <prgItem>
+      <time>01:00-01:50</time>
+      <name>사랑의 가족(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>01:50-05:00</time>
+      <name>KBS 재난방송센터(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>05:00-05:05</time>
+      <name>숨터(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>05:05-06:00</time>
+      <name>걸어서 세계 속으로(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>06:00-07:00</time>
+      <name>생방송 아침이 좋다</name>
+    </prgItem>
+    <prgItem>
+      <time>07:00-08:00</time>
+      <name>생방송 아침이 좋다</name>
+    </prgItem>
+    <prgItem>
+      <time>08:00-09:00</time>
+      <name>KBS 아침 뉴스타임</name>
+    </prgItem>
+    <prgItem>
+      <time>09:00-09:40</time>
+      <name>TV소설 파도야 파도야</name>
+    </prgItem>
+    <prgItem>
+      <time>09:40-10:40</time>
+      <name>여유만만</name>
+    </prgItem>
+    <prgItem>
+      <time>10:40-11:00</time>
+      <name>지구촌 뉴스</name>
+    </prgItem>
+    <prgItem>
+      <time>11:00-12:05</time>
+      <name>너도 인간이니?(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>12:05-13:00</time>
+      <name>생생정보 스페셜</name>
+    </prgItem>
+    <prgItem>
+      <time>13:00-14:00</time>
+      <name>1 대 100(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>14:00-14:10</time>
+      <name>KBS 뉴스타임</name>
+    </prgItem>
+    <prgItem>
+      <time>14:10-15:00</time>
+      <name>생활의 발견(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>15:00-15:30</time>
+      <name>자동공부책상 위키 2</name>
+    </prgItem>
+    <prgItem>
+      <time>15:30-16:00</time>
+      <name>TV 유치원</name>
+    </prgItem>
+    <prgItem>
+      <time>16:00-16:55</time>
+      <name>여유만만(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>16:55-18:00</time>
+      <name>제보자들(재)</name>
+    </prgItem>
+    <prgItem>
+      <time>18:00-18:30</time>
+      <name>KBS 경제타임</name>
+    </prgItem>
+    <prgItem>
+      <time>18:30-19:50</time>
+      <name>2TV 생생정보</name>
+    </prgItem>
+    <prgItem>
+      <time>19:50-20:30</time>
+      <name>인형의 집</name>
+    </prgItem>
+    <prgItem>
+      <time>20:30-20:55</time>
+      <name>글로벌24</name>
+    </prgItem>
+    <prgItem>
+      <time>20:55-22:00</time>
+      <name>1 대 100</name>
+    </prgItem>
+    <prgItem>
+      <time>22:00-00:40</time>
+      <name>너도 인간이니?</name>
+    </prgItem>
+  </item>
 </timeTable>
+
