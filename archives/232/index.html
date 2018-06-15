@@ -1,10 +1,21 @@
 
-<!DOCTYPE HTML><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"><title>nginx使用lua相关 &#8211; 远道者的博客</title><script>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>nginx使用lua相关 &#8211; 远道者的博客</title>
+<script>
 window._deel = {name: '远道者的博客',url: '                     /wp-content/themes/yusi1.0', ajaxpager: '', commenton: 0, roll: [0,0]}
-</script><link rel='dns-prefetch' href='//libs.baidu.com' /><link rel='dns-prefetch' href='//s.w.org' /><script type="text/javascript">
+</script>
+<link rel='dns-prefetch' href='//libs.baidu.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?$version"}};
 			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script><style type="text/css">
+		</script>
+		<style type="text/css">
 img.wp-smiley,
 img.emoji {
 	display: inline !important;
@@ -17,7 +28,78 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
-</style><link rel='stylesheet' id='style-css'  href='/wp-content/themes/yusi1.0/style_1.css' type='text/css' media='all' /><script type='text/javascript' src='//libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=1.0'></script><script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_1.js'></script><link rel='https://api.w.org/' href='                     /wp-json/' /><link rel='prev' title='luajit ffi使用C++的动态库' href='                     /archives/230' /><link rel='next' title='centos7更新yum源为163的源' href='                     /archives/243' /><link rel="canonical" href="                     /archives/232" /><link rel='shortlink' href='/b8.html' /><link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/b9.html" /><link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F232&#038;format=xml" /><script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="工作技术"><meta name="description" content="nginx使用lua设置回应的Http头，比如要在回应的http头里面添加一个name:so123可以这样ngx.header[&quot;name&quot;]&nbsp;=&nbsp;&quot;so123&quot;;所以要添加refer也是很简单ngx.header[&quot;Referer&quot;]&nbsp;=&nbsp;&quot;http://www.so123.info&quot;;lua获取请求的refer应该"><!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]--></head><body class="post-template-default single single-post postid-232 single-format-standard"><header id="header" class="header"><div class="container-inner"><div class="yusi-logo"><a href="/"><h1><span class="yusi-mono">远道者的博客</span><span class="yusi-bloger">技术文章</span></h1></a></div></div><div id="nav-header" class="navbar"><ul class="nav"><div class="menu"></div><li style="float:right;"><div class="toggle-search"><i class="fa fa-search"></i></div><div class="search-expand" style="display: none;"><div class="search-expand-inner"><form method="get" class="searchform themeform" onsubmit="location.href='                     /search/' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/"><div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='search...';" onfocus="if(this.value=='search...')this.value='';" value="search..."></div></form></div></div></li></ul></div></div></header><section class="container"><div class="speedbar"><div class="toptip"><strong class="text-success"><i class="fa fa-volume-up"></i></strong></div></div><div class="content-wrap"><div class="content"><header class="article-header"><h1 class="article-title"><a href="                     /archives/232">nginx使用lua相关</a></h1><div class="meta"><span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af"> 工作技术</a></span><span class="muted"><i class="fa fa-user"></i><a href="                     /archives/author/admin">admin</a></span><time class="muted"><i class="fa fa-clock-o"></i> 9个月前 (09-13)</time><span class="muted"><i class="fa fa-eye"></i> 71℃</span></div></header><article class="article-content"><p>nginx使用lua设置回应的Http头，比如要在回应的http头里面添加一个name:so123可以这样</p><pre class="brush:bash;toolbar:false">ngx.header[&quot;name&quot;]&nbsp;=&nbsp;&quot;so123&quot;;</pre><p>所以要添加refer也是很简单</p><pre class="brush:bash;toolbar:false">ngx.header[&quot;Referer&quot;]&nbsp;=&nbsp;&quot;http://www.so123.info&quot;;</pre><p></p><p>lua获取请求的refer应该用变量</p><pre class="brush:bash;toolbar:false">ngx.var.http_referer</pre><p></p><p>wget下载文件的时候添加自定义Http头 例如refer</p><pre class="brush:bash;toolbar:false">wget&nbsp;http://192.168.4.194/lei.jpg&nbsp;&nbsp;--head=&quot;referer:http://www.so123.info?name=lei&amp;flag=true&quot;</pre><p>wget下载文件的时候指定代理的ip</p><pre class="brush:bash;toolbar:false">wget&nbsp;http://testcdn1.forcetech.net/e.jpg&nbsp;-e&nbsp;&quot;http_proxy=http://122.72.76.2&quot;</pre><p>curl下载的时候指定代理</p><pre class="brush:bash;toolbar:false">curl&nbsp;-I&nbsp;&quot;http://nb-t.2r3u48np.net/index.php?c=menuv2&amp;no=1&quot;&nbsp;-x&nbsp;127.0.0.1:8966</pre><p>一些内置变量</p><pre class="brush:plain;toolbar:false">$arg_PARAMETER&nbsp;这个变量包含在查询字符串时GET请求PARAMETER的值。
+</style>
+<link rel='stylesheet' id='style-css'  href='/wp-content/themes/yusi1.0/style_28329.css                       ' type='text/css' media='all' />
+<script type='text/javascript' src='//libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=1.0'></script>
+<script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_28329.js                       '></script>
+<link rel='https://api.w.org/' href='                     /wp-json/' />
+<link rel='prev' title='luajit ffi使用C++的动态库' href='                     /archives/230' />
+<link rel='next' title='centos7更新yum源为163的源' href='                     /archives/243' />
+<link rel="canonical" href="                     /archives/232" />
+<link rel='shortlink' href='/index_17154.html           ' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_47823.html                                                       " />
+<link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F232&#038;format=xml" />
+<script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="工作技术">
+<meta name="description" content="nginx使用lua设置回应的Http头，比如要在回应的http头里面添加一个name:so123可以这样ngx.header[&quot;name&quot;]&nbsp;=&nbsp;&quot;so123&quot;;所以要添加refer也是很简单ngx.header[&quot;Referer&quot;]&nbsp;=&nbsp;&quot;http://www.so123.info&quot;;lua获取请求的refer应该">
+<!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]-->
+</head>
+<body class="post-template-default single single-post postid-232 single-format-standard">
+
+<header id="header" class="header">
+<div class="container-inner">
+ <div class="yusi-logo">
+                    <a href="/">
+                        <h1>
+                                                        <span class="yusi-mono">远道者的博客</span>
+                                                        <span class="yusi-bloger">技术文章</span>
+                                                    </h1>
+                    </a>
+    </div>
+</div>
+
+	<div id="nav-header" class="navbar">
+		
+		<ul class="nav">
+			<div class="menu"></div>
+<li style="float:right;">
+                    <div class="toggle-search"><i class="fa fa-search"></i></div>
+<div class="search-expand" style="display: none;"><div class="search-expand-inner"><form method="get" class="searchform themeform" onsubmit="location.href='                     /search/' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/"><div> <input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='search...';" onfocus="if(this.value=='search...')this.value='';" value="search..."></div></form></div></div>
+</li>
+		</ul>
+	</div>
+	</div>
+</header>
+<section class="container"><div class="speedbar">
+				<div class="toptip"><strong class="text-success"><i class="fa fa-volume-up"></i> </strong> </div>
+	</div>
+	<div class="content-wrap">
+	<div class="content">
+
+				<header class="article-header">
+			<h1 class="article-title"><a href="                     /archives/232">nginx使用lua相关</a></h1>
+			<div class="meta">
+				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af"> 工作技术</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
+				<time class="muted"><i class="fa fa-clock-o"></i> 9个月前 (09-13)</time>
+				<span class="muted"><i class="fa fa-eye"></i> 72℃</span>
+											</div>
+		</header>
+		<article class="article-content">
+			<p>nginx使用lua设置回应的Http头，比如要在回应的http头里面添加一个name:so123可以这样</p>
+<pre class="brush:bash;toolbar:false">ngx.header[&quot;name&quot;]&nbsp;=&nbsp;&quot;so123&quot;;</pre>
+<p>所以要添加refer也是很简单</p>
+<pre class="brush:bash;toolbar:false">ngx.header[&quot;Referer&quot;]&nbsp;=&nbsp;&quot;http://www.so123.info&quot;;</pre>
+<p></p>
+<p>lua获取请求的refer应该用变量</p>
+<pre class="brush:bash;toolbar:false">ngx.var.http_referer</pre>
+<p></p>
+<p>wget下载文件的时候添加自定义Http头 例如refer</p>
+<pre class="brush:bash;toolbar:false">wget&nbsp;http://192.168.4.194/lei.jpg&nbsp;&nbsp;--head=&quot;referer:http://www.so123.info?name=lei&amp;flag=true&quot;</pre>
+<p>wget下载文件的时候指定代理的ip</p>
+<pre class="brush:bash;toolbar:false">wget&nbsp;http://testcdn1.forcetech.net/e.jpg&nbsp;-e&nbsp;&quot;http_proxy=http://122.72.76.2&quot;</pre>
+<p>curl下载的时候指定代理</p>
+<pre class="brush:bash;toolbar:false">curl&nbsp;-I&nbsp;&quot;http://nb-t.2r3u48np.net/index.php?c=menuv2&amp;no=1&quot;&nbsp;-x&nbsp;127.0.0.1:8966</pre>
+<p>一些内置变量</p>
+<pre class="brush:plain;toolbar:false">$arg_PARAMETER&nbsp;这个变量包含在查询字符串时GET请求PARAMETER的值。
 $args&nbsp;这个变量等于请求行中的参数。
 $binary_remote_addr&nbsp;二进制码形式的客户端地址。
 $body_bytes_sent&nbsp;传送页面的字节数
@@ -45,8 +127,77 @@ $server_addr&nbsp;服务器地址，在完成一次系统调用后可以确定�
 $server_name&nbsp;服务器名称。
 $server_port&nbsp;请求到达服务器的端口号。
 $server_protocol&nbsp;请求使用的协议，通常是HTTP/1.0或HTTP/1.1。
-$uri&nbsp;请求中的当前URI(不带请求参数，参数位于$args)，可以不同于浏览器传递的$request_uri的值，它可以通过内部重定向，或者使用index指令进行修改。</pre><p></p><p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/232">nginx使用lua相关</a></p><div class="article-social"><a href="javascript:;" data-action="ding" data-id="232" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">1</span>)</a></div></article><footer class="article-footer"></footer><nav class="article-nav"><span class="article-nav-prev"><i class="fa fa-angle-double-left"></i><a href="                     /archives/230" rel="prev">luajit ffi使用C++的动态库</a></span><span class="article-nav-next"><a href="                     /archives/243" rel="next">centos7更新yum源为163的源</a><i class="fa fa-angle-double-right"></i></span></nav><div class="related_top"><div class="related_posts"><ul class="related_img"><li class="related_box"  ><a href="                     /archives/692" title="centos开机启动脚本" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_1a.html" alt="centos开机启动脚本" /><br><span class="r_title">centos开机启动脚本</span></a></li><li class="related_box"  ><a href="                     /archives/687" title="centos打造本地网站环境" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_19.html" alt="centos打造本地网站环境" /><br><span class="r_title">centos打造本地网站环境</span></a></li><li class="related_box"  ><a href="                     /archives/685" title="XAMPP建立多个网站" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_19.html" alt="XAMPP建立多个网站" /><br><span class="r_title">XAMPP建立多个网站</span></a></li><li class="related_box"  ><a href="                     /archives/677" title="获取免费的https证书" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_1a.html" alt="获取免费的https证书" /><br><span class="r_title">获取免费的https证书</span></a></li></ul><div class="relates"><ul><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/692">centos开机启动脚本</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/687">centos打造本地网站环境</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/685">XAMPP建立多个网站</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/677">获取免费的https证书</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/671">bat脚本启动后进入当前目录</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/666">反汇编相关</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/654">皮囊</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/651">MooseFs冗余设置</a></li></ul></div></div></div></div></div><aside class="sidebar"><div class="widget widget_text"><div class="textwidget"><div class="social"></div></div></div><div class="widget widget_categories"><div class="title"><h2>分类目录</h2></div><ul><li class="cat-item cat-item-9"><a href="                     /archives/category/c" >C/C++基础</a></li><li class="cat-item cat-item-5"><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af" >工作技术</a></li><li class="cat-item cat-item-1"><a href="                     /archives/category/uncategorized" >未分类</a></li></ul></div></aside></section><footer class="footer"><div class="footer-inner"><div class="copyright pull-left"><a href="/" title="lei.cool">lei.cool</a> 版权所有，保留一切权利，联系站长815219799@qq.com
-        </div><div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1272902413'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/stat.php%3Fid%3D1272902413%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div></div></footer><script type="text/javascript">SyntaxHighlighter.all();</script><script type='text/javascript' src='/wp-includes/js/wp-embed_f.min.js'></script><script>
+$uri&nbsp;请求中的当前URI(不带请求参数，参数位于$args)，可以不同于浏览器传递的$request_uri的值，它可以通过内部重定向，或者使用index指令进行修改。</pre>
+<p></p>
+<p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/232">nginx使用lua相关</a></p>
+
+      
+<div class="article-social">
+			<a href="javascript:;" data-action="ding" data-id="232" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">1</span>)</a>	
+</div>
+	</article>	
+				<footer class="article-footer">
+			</footer>
+	<nav class="article-nav">
+			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/230" rel="prev">luajit ffi使用C++的动态库</a></span>
+			<span class="article-nav-next"><a href="                     /archives/243" rel="next">centos7更新yum源为163的源</a>  <i class="fa fa-angle-double-right"></i></span>
+		</nav>
+
+		<div class="related_top">
+			<div class="related_posts"><ul class="related_img">
+
+	<li class="related_box"  >
+		<a href="                     /archives/692" title="centos开机启动脚本" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="centos开机启动脚本" /><br><span class="r_title">centos开机启动脚本</span></a>
+		</li>
+	
+	<li class="related_box"  >
+		<a href="                     /archives/687" title="centos打造本地网站环境" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_37516.html                                                                                                           " alt="centos打造本地网站环境" /><br><span class="r_title">centos打造本地网站环境</span></a>
+		</li>
+	
+	<li class="related_box"  >
+		<a href="                     /archives/685" title="XAMPP建立多个网站" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_51340.html                                                                                                           " alt="XAMPP建立多个网站" /><br><span class="r_title">XAMPP建立多个网站</span></a>
+		</li>
+	
+	<li class="related_box"  >
+		<a href="                     /archives/677" title="获取免费的https证书" target="_blank">
+		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="获取免费的https证书" /><br><span class="r_title">获取免费的https证书</span></a>
+		</li>
+	</ul>
+
+<div class="relates">
+<ul>
+<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/692">centos开机启动脚本</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/687">centos打造本地网站环境</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/685">XAMPP建立多个网站</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/677">获取免费的https证书</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/671">bat脚本启动后进入当前目录</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/666">反汇编相关</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/654">皮囊</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/651">MooseFs冗余设置</a></li>
+</ul></div></div>		</div>
+									</div>
+</div>
+<aside class="sidebar">	
+<div class="widget widget_text"><div class="textwidget"><div class="social">
+</div></div></div>
+
+<div class="widget widget_categories"><div class="title"><h2>分类目录</h2></div>		<ul>
+	<li class="cat-item cat-item-9"><a href="                     /archives/category/c" >C/C++基础</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af" >工作技术</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="                     /archives/category/uncategorized" >未分类</a>
+</li>
+		</ul>
+</div></aside></section>
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="copyright pull-left">
+          <a href="/" title="lei.cool">lei.cool</a> 版权所有，保留一切权利，联系站长815219799@qq.com
+        </div>
+        <div class="trackcode pull-right">
+            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1272902413'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/stat.php%3Fid%3D1272902413%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">SyntaxHighlighter.all();</script><script type='text/javascript' src='/wp-includes/js/wp-embed_685.min.js                           '></script>
+<script>
 (function(){
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
@@ -59,4 +210,5 @@ $uri&nbsp;请求中的当前URI(不带请求参数，参数位于$args)，可以
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script></body></html>
+</script></body>
+</html>
