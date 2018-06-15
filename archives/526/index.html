@@ -1,21 +1,10 @@
 
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<title>sizeof的理解 &#8211; 远道者的博客</title>
-<script>
+<!DOCTYPE HTML><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"><title>sizeof的理解 &#8211; 远道者的博客</title><script>
 window._deel = {name: '远道者的博客',url: '                     /wp-content/themes/yusi1.0', ajaxpager: '', commenton: 0, roll: [0,0]}
-</script>
-<link rel='dns-prefetch' href='//libs.baidu.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-		<script type="text/javascript">
+</script><link rel='dns-prefetch' href='//libs.baidu.com' /><link rel='dns-prefetch' href='//s.w.org' /><script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?$version"}};
 			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
+		</script><style type="text/css">
 img.wp-smiley,
 img.emoji {
 	display: inline !important;
@@ -28,64 +17,7 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
-</style>
-<link rel='stylesheet' id='style-css'  href='/wp-content/themes/yusi1.0/style_28329.css                       ' type='text/css' media='all' />
-<script type='text/javascript' src='//libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=1.0'></script>
-<script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_28329.js                       '></script>
-<link rel='https://api.w.org/' href='                     /wp-json/' />
-<link rel='prev' title='libxl读取Excel文件的日期' href='                     /archives/523' />
-<link rel='next' title='bool的理解' href='                     /archives/528' />
-<link rel="canonical" href="                     /archives/526" />
-<link rel='shortlink' href='/index_50549.html           ' />
-<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/index_15544.html                                                       " />
-<link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F526&#038;format=xml" />
-<script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="C/C++基础">
-<meta name="description" content="sizeof在C/C++语言中是一个关键字，虽然用法感觉是一个函数，得出结果是编译阶段，就是说代码编译完成的时候，所有用到了sizeof的地方其实值就已经确定了，下面是一段反汇编，可以更加清楚的看明白class&nbsp;CDemo { }; int&nbsp;main() { 004113B0&nbsp;&nbsp;push&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ebp&nbsp">
-<!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]-->
-</head>
-<body class="post-template-default single single-post postid-526 single-format-standard">
-
-<header id="header" class="header">
-<div class="container-inner">
- <div class="yusi-logo">
-                    <a href="/">
-                        <h1>
-                                                        <span class="yusi-mono">远道者的博客</span>
-                                                        <span class="yusi-bloger">技术文章</span>
-                                                    </h1>
-                    </a>
-    </div>
-</div>
-
-	<div id="nav-header" class="navbar">
-		
-		<ul class="nav">
-			<div class="menu"></div>
-<li style="float:right;">
-                    <div class="toggle-search"><i class="fa fa-search"></i></div>
-<div class="search-expand" style="display: none;"><div class="search-expand-inner"><form method="get" class="searchform themeform" onsubmit="location.href='                     /search/' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/"><div> <input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='search...';" onfocus="if(this.value=='search...')this.value='';" value="search..."></div></form></div></div>
-</li>
-		</ul>
-	</div>
-	</div>
-</header>
-<section class="container"><div class="speedbar">
-				<div class="toptip"><strong class="text-success"><i class="fa fa-volume-up"></i> </strong> </div>
-	</div>
-	<div class="content-wrap">
-	<div class="content">
-
-				<header class="article-header">
-			<h1 class="article-title"><a href="                     /archives/526">sizeof的理解</a></h1>
-			<div class="meta">
-				<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/c"> C/C++基础</a></span>				<span class="muted"><i class="fa fa-user"></i> <a href="                     /archives/author/admin">admin</a></span>
-				<time class="muted"><i class="fa fa-clock-o"></i> 3个月前 (02-22)</time>
-				<span class="muted"><i class="fa fa-eye"></i> 20℃</span>
-											</div>
-		</header>
-		<article class="article-content">
-			<p>sizeof在C/C++语言中是一个关键字，虽然用法感觉是一个函数，得出结果是编译阶段，就是说代码编译完成的时候，所有用到了sizeof的地方其实值就已经确定了，下面是一段反汇编，可以更加清楚的看明白</p>
-<pre class="brush:cpp;toolbar:false">class&nbsp;CDemo
+</style><link rel='stylesheet' id='style-css'  href='/wp-content/themes/yusi1.0/style_1.css' type='text/css' media='all' /><script type='text/javascript' src='//libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=1.0'></script><script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_1.js'></script><link rel='https://api.w.org/' href='                     /wp-json/' /><link rel='prev' title='libxl读取Excel文件的日期' href='                     /archives/523' /><link rel='next' title='bool的理解' href='                     /archives/528' /><link rel="canonical" href="                     /archives/526" /><link rel='shortlink' href='/7a.html' /><link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/7b.html" /><link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F526&#038;format=xml" /><script type="text/javascript" src="                     /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href="                      /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="C/C++基础"><meta name="description" content="sizeof在C/C++语言中是一个关键字，虽然用法感觉是一个函数，得出结果是编译阶段，就是说代码编译完成的时候，所有用到了sizeof的地方其实值就已经确定了，下面是一段反汇编，可以更加清楚的看明白class&nbsp;CDemo { }; int&nbsp;main() { 004113B0&nbsp;&nbsp;push&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ebp&nbsp"><!--[if lt IE 9]><script src="                     /wp-content/themes/yusi1.0/js/html5.js"></script><![endif]--></head><body class="post-template-default single single-post postid-526 single-format-standard"><header id="header" class="header"><div class="container-inner"><div class="yusi-logo"><a href="/"><h1><span class="yusi-mono">远道者的博客</span><span class="yusi-bloger">技术文章</span></h1></a></div></div><div id="nav-header" class="navbar"><ul class="nav"><div class="menu"></div><li style="float:right;"><div class="toggle-search"><i class="fa fa-search"></i></div><div class="search-expand" style="display: none;"><div class="search-expand-inner"><form method="get" class="searchform themeform" onsubmit="location.href='                     /search/' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/"><div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='search...';" onfocus="if(this.value=='search...')this.value='';" value="search..."></div></form></div></div></li></ul></div></div></header><section class="container"><div class="speedbar"><div class="toptip"><strong class="text-success"><i class="fa fa-volume-up"></i></strong></div></div><div class="content-wrap"><div class="content"><header class="article-header"><h1 class="article-title"><a href="                     /archives/526">sizeof的理解</a></h1><div class="meta"><span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="                     /archives/category/c"> C/C++基础</a></span><span class="muted"><i class="fa fa-user"></i><a href="                     /archives/author/admin">admin</a></span><time class="muted"><i class="fa fa-clock-o"></i> 4个月前 (02-22)</time><span class="muted"><i class="fa fa-eye"></i> 23℃</span></div></header><article class="article-content"><p>sizeof在C/C++语言中是一个关键字，虽然用法感觉是一个函数，得出结果是编译阶段，就是说代码编译完成的时候，所有用到了sizeof的地方其实值就已经确定了，下面是一段反汇编，可以更加清楚的看明白</p><pre class="brush:cpp;toolbar:false">class&nbsp;CDemo
 {
 };
 int&nbsp;main()
@@ -117,77 +49,8 @@ int&nbsp;main()
 004113F9&nbsp;&nbsp;call&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@ILT+315(__RTC_CheckEsp)&nbsp;(411140h)&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;
 004113FE&nbsp;&nbsp;xor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eax,eax&nbsp;
-}</pre>
-<p>注意printf语句下面的第二行汇编语句，push 1，这里就已经求出了类CDemo的大小了，直接赋值1了</p>
-<p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/526">sizeof的理解</a></p>
-
-      
-<div class="article-social">
-			<a href="javascript:;" data-action="ding" data-id="526" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a>	
-</div>
-	</article>	
-				<footer class="article-footer">
-			</footer>
-	<nav class="article-nav">
-			<span class="article-nav-prev"><i class="fa fa-angle-double-left"></i> <a href="                     /archives/523" rel="prev">libxl读取Excel文件的日期</a></span>
-			<span class="article-nav-next"><a href="                     /archives/528" rel="next">bool的理解</a>  <i class="fa fa-angle-double-right"></i></span>
-		</nav>
-
-		<div class="related_top">
-			<div class="related_posts"><ul class="related_img">
-
-	<li class="related_box"  >
-		<a href="                     /archives/593" title="centos5.8构建本地yum源" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_36608.html                                                                                                            " alt="centos5.8构建本地yum源" /><br><span class="r_title">centos5.8构建本地yum源</span></a>
-		</li>
-	
-	<li class="related_box"  >
-		<a href="                     /archives/531" title="C/C++基础知识" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_17647.html                                                                                                     " alt="C/C++基础知识" /><br><span class="r_title">C/C++基础知识</span></a>
-		</li>
-	
-	<li class="related_box"  >
-		<a href="                     /archives/528" title="bool的理解" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_27791.html                                                                                                           " alt="bool的理解" /><br><span class="r_title">bool的理解</span></a>
-		</li>
-	
-	<li class="related_box"  >
-		<a href="                     /archives/195" title="C++中放弃使用cout只使用printf" target="_blank">
-		<img src="/wp-content/themes/yusi1.0/timthumb_143.html                                                                                                             " alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a>
-		</li>
-	</ul>
-
-<div class="relates">
-<ul>
-<li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/593">centos5.8构建本地yum源</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/531">C/C++基础知识</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/528">bool的理解</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/195">C++中放弃使用cout只使用printf</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/192">C++容易搞错的问题</a></li>
-</ul></div></div>		</div>
-									</div>
-</div>
-<aside class="sidebar">	
-<div class="widget widget_text"><div class="textwidget"><div class="social">
-</div></div></div>
-
-<div class="widget widget_categories"><div class="title"><h2>分类目录</h2></div>		<ul>
-	<li class="cat-item cat-item-9"><a href="                     /archives/category/c" >C/C++基础</a>
-</li>
-	<li class="cat-item cat-item-5"><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af" >工作技术</a>
-</li>
-	<li class="cat-item cat-item-1"><a href="                     /archives/category/uncategorized" >未分类</a>
-</li>
-		</ul>
-</div></aside></section>
-<footer class="footer">
-    <div class="footer-inner">
-        <div class="copyright pull-left">
-          <a href="/" title="lei.cool">lei.cool</a> 版权所有，保留一切权利，联系站长815219799@qq.com
-        </div>
-        <div class="trackcode pull-right">
-            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1272902413'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/stat.php%3Fid%3D1272902413%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>        </div>
-    </div>
-</footer>
-
-<script type="text/javascript">SyntaxHighlighter.all();</script><script type='text/javascript' src='/wp-includes/js/wp-embed_685.min.js                           '></script>
-<script>
+}</pre><p>注意printf语句下面的第二行汇编语句，push 1，这里就已经求出了类CDemo的大小了，直接赋值1了</p><p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="                     /archives/526">sizeof的理解</a></p><div class="article-social"><a href="javascript:;" data-action="ding" data-id="526" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">0</span>)</a></div></article><footer class="article-footer"></footer><nav class="article-nav"><span class="article-nav-prev"><i class="fa fa-angle-double-left"></i><a href="                     /archives/523" rel="prev">libxl读取Excel文件的日期</a></span><span class="article-nav-next"><a href="                     /archives/528" rel="next">bool的理解</a><i class="fa fa-angle-double-right"></i></span></nav><div class="related_top"><div class="related_posts"><ul class="related_img"><li class="related_box"  ><a href="                     /archives/593" title="centos5.8构建本地yum源" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_1b.html" alt="centos5.8构建本地yum源" /><br><span class="r_title">centos5.8构建本地yum源</span></a></li><li class="related_box"  ><a href="                     /archives/531" title="C/C++基础知识" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_4a.html" alt="C/C++基础知识" /><br><span class="r_title">C/C++基础知识</span></a></li><li class="related_box"  ><a href="                     /archives/528" title="bool的理解" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_19.html" alt="bool的理解" /><br><span class="r_title">bool的理解</span></a></li><li class="related_box"  ><a href="                     /archives/195" title="C++中放弃使用cout只使用printf" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_19.html" alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a></li></ul><div class="relates"><ul><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/593">centos5.8构建本地yum源</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/531">C/C++基础知识</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/528">bool的理解</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/195">C++中放弃使用cout只使用printf</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="                     /archives/192">C++容易搞错的问题</a></li></ul></div></div></div></div></div><aside class="sidebar"><div class="widget widget_text"><div class="textwidget"><div class="social"></div></div></div><div class="widget widget_categories"><div class="title"><h2>分类目录</h2></div><ul><li class="cat-item cat-item-9"><a href="                     /archives/category/c" >C/C++基础</a></li><li class="cat-item cat-item-5"><a href="                     /archives/category/%e5%b7%a5%e4%bd%9c%e6%8a%80%e6%9c%af" >工作技术</a></li><li class="cat-item cat-item-1"><a href="                     /archives/category/uncategorized" >未分类</a></li></ul></div></aside></section><footer class="footer"><div class="footer-inner"><div class="copyright pull-left"><a href="/" title="lei.cool">lei.cool</a> 版权所有，保留一切权利，联系站长815219799@qq.com
+        </div><div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1272902413'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/stat.php%3Fid%3D1272902413%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div></div></footer><script type="text/javascript">SyntaxHighlighter.all();</script><script type='text/javascript' src='/wp-includes/js/wp-embed_f.min.js'></script><script>
 (function(){
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
@@ -200,5 +63,4 @@ int&nbsp;main()
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script></body>
-</html>
+</script></body></html>
