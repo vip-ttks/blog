@@ -1,0 +1,196 @@
+
+<!DOCTYPE HTML><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"><title>C/C++基础知识 &#8211; 远道者的博客</title><script>
+window._deel = {name: '远道者的博客',url: '                     /wp-content/themes/yusi1.0', ajaxpager: '', commenton: 0, roll: [0,0]}
+</script><link rel='dns-prefetch' href='//libs.baidu.com' /><link rel='dns-prefetch' href='//s.w.org' /><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?$version"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style><link rel='stylesheet' id='style-css'  href='/wp-content/themes/yusi1.0/style_668372156ca6fe077f51c44ef2c4a6e6.css' type='text/css' media='all' /><script type='text/javascript' src='//libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=1.0'></script><script type='text/javascript' src='/wp-content/themes/yusi1.0/js/jquery_668372156ca6fe077f51c44ef2c4a6e6.js'></script><link rel='https://api.w.org/' href='/wp-json//index.html' /><link rel='prev' title='bool的理解' href='/archives/528/index.html' /><link rel='next' title='ReadDirectoryChangesW找不到标识符' href='/archives/565/index.html' /><link rel="canonical" href="/archives/531/index.html" /><link rel='shortlink' href='/572d3dbb8939d9ceef21916b29c694f4.html' /><link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed/ad1f76ac87edeb97b9a91871bbfb31b6.html" /><link rel="alternate" type="text/xml+oembed" href="                     /wp-json/oembed/1.0/embed?url=http%3A%2F%2F127.0.0.1%3A8000%2Farchives%2F531&#038;format=xml" /><script type="text/javascript" src="/wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCore.js"></script><link type="text/css" rel="stylesheet" href=" /wp-content/plugins/ueditor/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" /><meta name="keywords" content="C/C++基础"><meta name="description" content="C/C++面试或者笔试需要准备的专业知识有如下几方面基础知识例如指针，类，虚函数等等static关键字的作用作用域（代码块，函数，文件全局范围）范围内 表示变量生命周期一直存在，类似全局变量，内存位置为静态存储区；作用域外不可见，不可访问。对于struct/class的成员变量，表示类的命名范围可见，可访问；对于成员函数使用static表示函数在类的命名空间可见，但是该函数只能范围该类的静态成员，不能访问正常的成员变量，成员函数对于静态"><!--[if lt IE 9]><script src="/wp-content/themes/yusi1.0/js/html5.js"></script><![endif]--></head><body class="post-template-default single single-post postid-531 single-format-standard"><header id="header" class="header"><div class="container-inner"><div class="yusi-logo"><a href="/"><h1><span class="yusi-mono">远道者的博客</span><span class="yusi-bloger">技术文章</span></h1></a></div></div><div id="nav-header" class="navbar"><ul class="nav"><div class="menu"></div><li style="float:right;"><div class="toggle-search"><i class="fa fa-search"></i></div><div class="search-expand" style="display: none;"><div class="search-expand-inner"><form method="get" class="searchform themeform" onsubmit="location.href='                     /search/' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/"><div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='search...';" onfocus="if(this.value=='search...')this.value='';" value="search..."></div></form></div></div></li></ul></div></div></header><section class="container"><div class="speedbar"><div class="toptip"><strong class="text-success"><i class="fa fa-volume-up"></i></strong></div></div><div class="content-wrap"><div class="content"><header class="article-header"><h1 class="article-title"><a href="/archives/531/index.html">C/C++基础知识</a></h1><div class="meta"><span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="/archives/category/c/index.html"> C/C++基础</a></span><span class="muted"><i class="fa fa-user"></i><a href="/archives/author/admin/index.html">admin</a></span><time class="muted"><i class="fa fa-clock-o"></i> 4个月前 (02-22)</time><span class="muted"><i class="fa fa-eye"></i> 49℃</span></div></header><article class="article-content"><p>C/C++面试或者笔试需要准备的专业知识有如下几方面</p><h1>基础知识</h1><p>例如指针，类，虚函数等等</p><h2>static关键字的作用</h2><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p>作用域（代码块，函数，文件全局范围）范围内 表示变量生命周期一直存在，类似全局变量，内存位置为静态存储区；作用域外不可见，不可访问。</p></li><li><p>对于struct/class的成员变量，表示类的命名范围可见，可访问；对于成员函数使用static表示函数在类的命名空间可见，但是该函数只能范围该类的静态成员，不能访问正常的成员变量，成员函数</p></li><li><p>对于静态存储区会初始化为0，所以使用static的变量内存默认会初始化为0</p></li></ol><h2>const关键字的作用</h2><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p>定义变量 表示只读，不可写</p></li><li><p>修饰函数参数，返回值时标明参数、返回值只读，不能改变</p></li><li><p>修饰类的成员函数表明该函数不能改变成员变量的值</p></li></ol><h2>指针和引用的区别</h2><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p>引用不是对象，不占用内存空间，指针是数据类型，占用空间</p></li><li><p>引用在定义的时候必须初始化，必须赋值，指针不必。</p></li><li><p>引用一旦定义后，就不能改变其引用对象，指针可以</p></li></ol><h2>assert和throw的区别</h2><p>使用情况不同，assert通常指调用方不按照规范传入数据，例如检查参数有效性方面；throw则指代码模块本身处理不了的问题，例如除法的时候除数为0的情况。</p><h2>常用string操作函数及声明、实现</h2><pre class="brush:cpp;toolbar:false">#include&nbsp;&lt;assert.h&gt;
+char*&nbsp;mystrcpy(char*&nbsp;dst,const&nbsp;char*&nbsp;src)
+{
+	assert(NULL!=dst&amp;&amp;NULL!=src);
+	if(dst==src)return&nbsp;dst;
+	char*&nbsp;tmp=dst;
+	while(*dst++=*src++);
+	return&nbsp;tmp;
+}
+char*&nbsp;mystrcat(char*&nbsp;dst,const&nbsp;char*&nbsp;src)
+{
+	assert(NULL!=dst&amp;&amp;NULL!=src&amp;&amp;dst!=src);
+	char*&nbsp;tmp=dst;
+	while(*dst)++dst;
+	while(*dst++=*src++);
+	return&nbsp;tmp;
+}</pre><h2>单向链表逆序<br /></h2><h2>下面的写法正确吗</h2><pre class="brush:cpp;toolbar:false">char&nbsp;ch[0];
+char&nbsp;*p=new&nbsp;char[1-1];</pre><p>第一行错误，不能定义长度为0的数组；第二行正确，new的时候可以是0，会返回一个正常的指针，好处是不用判断null，直接可以迭代循环，例如：</p><pre class="brush:cpp;toolbar:false">int&nbsp;n=rand()%2;
+char*&nbsp;p=new&nbsp;char[n];
+for(char*&nbsp;p1=p;p1&lt;p+n;++p1)printf(&quot;%c\n&quot;,*p1);</pre><h2>写出下面代码的运行结果</h2><pre class="brush:cpp;toolbar:false">void&nbsp;test(const&nbsp;int&amp;&nbsp;m)
+{
+	printf(&quot;m=%d\n&quot;,m);
+}
+int&nbsp;main()
+{
+	const&nbsp;int&nbsp;n=0;
+	int*&nbsp;p=(int*)(&amp;n);
+	*p=2;
+	int*&nbsp;p2=(int*)(&amp;n);
+	printf(&quot;*p=%d&nbsp;n=%d&nbsp;*p2=%d\n&quot;,*p,n,*p2);
+	test(n);
+	printf(&quot;*p=%d&nbsp;n=%d&nbsp;*p2=%d\n&quot;,*p,n,*p2);
+	return&nbsp;0;
+}</pre><p>运行结果为</p><pre class="brush:cpp;toolbar:false">*p=2&nbsp;n=0&nbsp;*p2=2
+m=2
+*p=2&nbsp;n=0&nbsp;*p2=2</pre><p>说明强制转换const变量的指针是可以改变对应的值的，只不过const变量本身被当成宏，直接全文替换了</p><h2>补码</h2><p>补码的意义在于，计算机存储整数的时候都通过补码存储，运算的时候就不用区分符合，减法也可以通过加法运算</p><p>正整数的补码就是符号位为0+二进制值</p><p>负数的补码可以理解成0-二进制值，也可以原码进行按位取反再加1</p><h2>写一个函数判断计算机字节序是否是小端</h2><pre class="brush:cpp;toolbar:false">bool&nbsp;isLittle()
+{
+	int&nbsp;n=0x12;
+	return&nbsp;*(char*)&amp;n==0x12?true:false;
+}</pre><h2>虚函数表</h2><p style="text-align: left;">C++不同于C的特征就是封装，继承，多态。其中多态的实现是用虚函数，所以需要重点理解。</p><p style="text-align: left;">一个拥有虚函数的类，对应的有一张虚函数表。虚函数表可以理解成一个函数指针数组，而每个有虚函数的类对应的实例内存最开始的位置都是指向虚函数表的指针，接着才会放成员变量,所以多个对象实际上是公用一个虚函数表。如果是多重继承，就会拥有多个指针，指向每一个基类虚函数表，所以如果是多重继承并且有函数覆盖的情况的话，会覆盖符合条件的所有基类。</p><h2 style="text-align: left;">sizeof<br /></h2><p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;sizeof是关键字，不是函数，运算结果在编译阶段完成。</p><p style="text-align: left;">计算下面代码的运行结果</p><pre class="brush:cpp;toolbar:false">class&nbsp;CDemo
+{
+};
+printf(&quot;sizeof&nbsp;CDemo=%d\n&quot;,sizeof(CDemo));
+printf(&quot;sizeof&nbsp;bool=%d\n&quot;,sizeof(bool));
+bool&nbsp;ch[5];
+printf(&quot;sizeof&nbsp;bool=%d\n&quot;,sizeof(ch));</pre><p>运行结果应该是1，1,5，空的类型大小通常为1，原因是实例化的对象需要寻址，最小必须暂用一个字节。而bool类型实际上可以看做unsigned char只不过非零的时候表示true，等于0时表示false</p><h2>内存对齐</h2><p>计算下面代码的结果</p><pre class="brush:cpp;toolbar:false">typedef&nbsp;struct&nbsp;&nbsp;&nbsp;&nbsp;
+{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;a:3;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;b:3;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;c:3;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;d:3;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;e:3;&nbsp;&nbsp;
+}test1;
+typedef&nbsp;struct&nbsp;&nbsp;&nbsp;&nbsp;
+{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;a:3;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;b:4;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;c:5;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;d:6;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;e:7;&nbsp;&nbsp;
+}test2;
+typedef&nbsp;struct{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;a;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;b;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;long&nbsp;c;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;d;&nbsp;&nbsp;
+}test3;
+printf(&quot;sizeof&nbsp;=%d\n&quot;,sizeof(test1));
+printf(&quot;sizeof&nbsp;=%d\n&quot;,sizeof(test2));
+printf(&quot;sizeof&nbsp;=%d\n&quot;,sizeof(test3));</pre><p>应该是3,4,16。</p><p>因为结构体内存分配有自己的对齐规则，结构体内存对齐默认的规则如下：</p><p>1.分配内存的顺序是按照声明的顺序。</p><p>2.每个变量相对于起始位置的偏移量必须是该变量类型大小的整数倍，不是整数倍空出内存，直到偏移量是整数倍为止。</p><p>3.最后整个结构体的大小必须是里面变量类型最大值的整数倍</p><h2><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">explicit关键字的作用</span></h2><p><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">explicit关键字用于只有一个参数的构造函数，或者拥有多个参数，但是只需要传入一个参数，其他的都是默认参数的构造函数，避免隐式转换，相当于要明确调用可以参考<a href="https://www.cnblogs.com/ymy124/p/3632634.html" _src="https://www.cnblogs.com/ymy124/p/3632634.html">https://www.cnblogs.com/ymy124/p/3632634.html</a></span></p><h2><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">重载，覆盖，<span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);"> 隐藏</span></span></h2><p><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">计算下面代码的结果</span></span></p><pre class="brush:cpp;toolbar:false">class&nbsp;CDemo
+{
+public:
+	virtual&nbsp;void&nbsp;demo()
+	{
+		printf(&quot;base::demo\n&quot;);
+	}
+	void&nbsp;demo1()
+	{
+		printf(&quot;base::demo1\n&quot;);
+	}
+};
+class&nbsp;CDemo2:public&nbsp;CDemo
+{
+public:
+	virtual&nbsp;void&nbsp;demo()
+	{
+		printf(&quot;driver::demo\n&quot;);
+	}
+	void&nbsp;demo1()
+	{
+		printf(&quot;driver::demo1\n&quot;);
+	}
+};
+CDemo2*&nbsp;p=new&nbsp;CDemo2();
+p-&gt;demo();
+p-&gt;demo1();
+CDemo*&nbsp;p2=(CDemo*)p;
+p2-&gt;demo();
+p2-&gt;demo1();</pre><p>运行结果是<img src="/ueditor/php/upload/image/20180222/1519289624127563.jpg" title="1519289624127563.jpg" alt="QQ截图20180222165304.jpg"/></p><p><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">重载是指通一个类下面，多个函数函数名相同，参数不同</span></span></p><p><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">覆盖是指基类中带有virtual修饰的函数和派生类中的函数名称相同，参数相同，导致覆盖的情况</span></span></p><p><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">隐藏和覆盖的区别仅仅在于基类没有virtual修饰，所以派生类对象的指针转换为基类指针后会调用基类的函数</span></span></p><h2><span style="color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">怎么判断double和float类型变量是否为零</span></h2><pre class="brush:cpp;toolbar:false">#include&nbsp;&lt;float.h&gt;
+int&nbsp;main()
+{
+	double&nbsp;f=0.000001;
+	if(abs(f)&lt;DBL_EPSILON)printf(&quot;zero\n&quot;);
+	else&nbsp;printf(&quot;not&nbsp;zero\n&quot;);
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;
+}</pre><p>DBL_EPSILON表示double的有效精度</p><p>FLT_EPSILON表示float的有效精度，他们的头文件是float.h</p><h1>数据结构/算法</h1><p>常见的排序，数据结构</p><h2>二叉树、搜索二叉树（查找二叉树）、平衡二叉树、红黑树</h2><p></p><h1>STL容器相关</h1><p>比如容器的分类，区别，应该怎么选择，stl容器分为序列容器和关联容器。序列容器包括vector,deque,list,string。关联容器包括set,map等</p><h2>vector内存不够时，每次增长的倍数</h2><p>vector是使用一块连续内存，所以当内存不够的时候就会重新分配内存，这个内存增长大小是2倍</p><h2>序列容器的选择</h2><p>vector，deque,list三种序列容器功能都大致一样，但是使用的效率不同。vector是一个连续内存，所以随机访问效率最高，在末尾出添加，删除的效率也很高，但是限制条件是数量不能太大；deque在一定程度上解决了vector数量不能太大的问题，并且可以在头部和尾部进行添加，删除操作，但是随机访问效率不如vecotr；list拥有数量大小基本没有限制，只是和机器相关，缺点是不能随机访问，但是在任何位置进行添加删除的效率都是一样的。</p><p>終上，选择原则如下：</p><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p>元素数量不多的情况下，只需要在末尾进行添加删除操作，需要随机访问高效的，选用vector</p></li><li><p>只需要头，尾进行添加删除操作，同时需要随机访问的，选用deque</p></li><li><p>元素数量大，有可能在任意位置进行添加删除操作的，选用list</p></li></ol><h2>vector/deque/list的排序</h2><p>对于vector和deque的排序要使用std::sort函数，该函数的头文件为algorithm（中文意思为算法），该函数至少要有两个参数，迭代器开始位置和迭代器的结束位置，并且迭代器能够随机访问例如it+n这种操作，对于基本数据类型，例如int可以直接调用，例如下面的代码：</p><pre class="brush:cpp;toolbar:false">srand(0);
+vector&lt;int&gt;&nbsp;v;
+for(int&nbsp;i=0;i&lt;5;i++)
+{
+	int&nbsp;n=rand();
+	v.push_back(n);
+}
+#if&nbsp;1
+printf(&quot;有小到大排序\n&quot;);
+std::sort(v.begin(),v.end());
+#else
+printf(&quot;有大到小排序\n&quot;);
+std::sort(v.rbegin(),v.rend());
+#endif
+for(int&nbsp;i=0;i&lt;5;i++)
+{
+	printf(&quot;v[%d]=%d\n&quot;,i,v[i]);
+}</pre><p>但是对于非基本类型，比如自定义的结构体，类就不能简单是使用上面的办法了，需要重载小于符号才能像上面那样使用了，代码如下：</p><pre class="brush:cpp;toolbar:false">#include&nbsp;&lt;stdio.h&gt;
+#include&nbsp;&lt;stdlib.h&gt;
+#include&nbsp;&lt;vector&gt;
+#include&nbsp;&lt;deque&gt;
+#include&nbsp;&lt;list&gt;
+#include&nbsp;&lt;set&gt;
+#include&nbsp;&lt;map&gt;
+#include&nbsp;&lt;algorithm&gt;
+//#include&nbsp;&lt;functional&gt;
+using&nbsp;namespace&nbsp;std;
+struct&nbsp;sDemo
+{
+	int&nbsp;demo;
+	int&nbsp;key;
+	bool&nbsp;operator&nbsp;&lt;&nbsp;(sDemo&amp;&nbsp;n)
+	{
+		if(n.key&gt;this-&gt;key)return&nbsp;true;
+		else&nbsp;return&nbsp;false;
+	}
+};
+int&nbsp;main()
+{
+	srand(0);
+	vector&lt;sDemo&gt;&nbsp;v;
+	for(int&nbsp;i=0;i&lt;5;i++)
+	{
+		sDemo&nbsp;demo;
+		demo.demo=rand();
+		demo.key=rand();
+		v.push_back(demo);
+	}
+
+	std::sort(v.begin(),v.end());
+	for(int&nbsp;i=0;i&lt;5;i++)
+	{
+		printf(&quot;v[%d]=%d&nbsp;%d\n&quot;,i,v[i].key,v[i].demo);
+	}
+
+	system(&quot;pause&quot;);
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;
+}</pre><p>对于list的排序，因为list自己有sort函数所以对于简单的基本类型可以直接调用，但是对于结构体等自定义的类型还是需要重载小于符号，才能调用sort</p><h1>设计模式</h1><p>常见的单例模式，工厂模式，观察者模式</p><p></p><h1>多线程同步，多进程同步</h1><h1>TCP/IP基本知识<br /></h1><h2>tcp三次握手<br /></h2><h2>selcet、poll、epoll的区别<br /></h2><h1>MySQL数据库基本操作<br /></h1><p>转载请注明：<a href="                    /">远道者的博客</a> &raquo; <a href="/archives/531/index.html">C/C++基础知识</a></p><div class="article-social"><a href="javascript:;" data-action="ding" data-id="531" id="Addlike" class="action"><i class="fa fa-heart-o"></i>喜欢 (<span class="count">1</span>)</a></div></article><footer class="article-footer"></footer><nav class="article-nav"><span class="article-nav-prev"><i class="fa fa-angle-double-left"></i><a href="/archives/528/index.html" rel="prev">bool的理解</a></span><span class="article-nav-next"><a href="/archives/565/index.html" rel="next">ReadDirectoryChangesW找不到标识符</a><i class="fa fa-angle-double-right"></i></span></nav><div class="related_top"><div class="related_posts"><ul class="related_img"><li class="related_box"  ><a href="/archives/593/index.html" title="centos5.8构建本地yum源" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_cecead4457b89811dc4f3e74a6b21af4.html" alt="centos5.8构建本地yum源" /><br><span class="r_title">centos5.8构建本地yum源</span></a></li><li class="related_box"  ><a href="/archives/528/index.html" title="bool的理解" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_fe9f3aba11f904231733df83775a0103.html" alt="bool的理解" /><br><span class="r_title">bool的理解</span></a></li><li class="related_box"  ><a href="/archives/526/index.html" title="sizeof的理解" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_4f05274bc92581800b5d095eba0cb520.html" alt="sizeof的理解" /><br><span class="r_title">sizeof的理解</span></a></li><li class="related_box"  ><a href="/archives/195/index.html" title="C++中放弃使用cout只使用printf" target="_blank"><img src="/wp-content/themes/yusi1.0/timthumb_c34e4477c8028c2fa5cf6039ca78e897.html" alt="C++中放弃使用cout只使用printf" /><br><span class="r_title">C++中放弃使用cout只使用printf</span></a></li></ul><div class="relates"><ul><li><i class="fa fa-minus"></i><a target="_blank" href="/archives/593/index.html">centos5.8构建本地yum源</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="/archives/528/index.html">bool的理解</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="/archives/526/index.html">sizeof的理解</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="/archives/195/index.html">C++中放弃使用cout只使用printf</a></li><li><i class="fa fa-minus"></i><a target="_blank" href="/archives/192/index.html">C++容易搞错的问题</a></li></ul></div></div></div></div></div><aside class="sidebar"><div class="widget widget_text"><div class="textwidget"><div class="social"></div></div></div><div class="widget widget_categories"><div class="title"><h2>分类目录</h2></div><ul><li class="cat-item cat-item-9"><a href="/archives/category/c/index.html" >C/C++基础</a></li><li class="cat-item cat-item-5"><a href="/archives/category//index.html" >工作技术</a></li><li class="cat-item cat-item-1"><a href="/archives/category/uncategorized/index.html" >未分类</a></li></ul></div></aside></section><footer class="footer"><div class="footer-inner"><div class="copyright pull-left"><a href="/" title="lei.cool">lei.cool</a> 版权所有，保留一切权利，联系站长815219799@qq.com
+        </div><div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1272902413'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/stat.php%3Fid%3D1272902413%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div></div></footer><script type="text/javascript">SyntaxHighlighter.all();</script><script type='text/javascript' src='/wp-includes/js/wp-embed_aaba8411f5e7bb6cecf2f82dd74a8577.min.js'></script><script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script></body></html>
